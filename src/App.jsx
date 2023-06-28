@@ -17,7 +17,7 @@ import Hourglass from "./pages/posts/Hourglass";
 import Att from "./pages/posts/Att";
 import Illuvion from "./pages/posts/Illuvion";
 import Ripe from "./pages/posts/Ripe";
-import Digital from './pages/gallery/digital';
+import Digital from './pages/gallery/Digital';
 import Photography from './pages/gallery/Photography';
 import Midjourney from './pages/gallery/Midjourney';
 import Modeling from './pages/gallery/Modeling';

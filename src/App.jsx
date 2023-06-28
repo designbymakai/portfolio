@@ -5,7 +5,7 @@ import { Nav, Banner, SmallNav, BannerAbout, BannerWorks } from "./components/He
 import { Author } from "./components/Footer";
 import { Footer } from "./components/Footer";
 
-import Spotlight from "./pages/home";
+import Spotlight from "./pages/Home";
 import Gallery from "./pages/Gallery";
 import About from "./pages/About";
 import FloodCheck from "./pages/posts/FloodCheck";

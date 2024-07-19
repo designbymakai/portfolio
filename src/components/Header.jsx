@@ -1,22 +1,39 @@
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css'; // optional
 import { BrowserRouter as Router, Routes, Route, Link, NavLink } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 
 
 export function Banner() {
     return (
-        <div
-  className="w-full m-0 p-0 bg-cover bg-bottom h-[300px] md:h-[460px]"
-  style={{ backgroundImage: 'url("/cover.jpg")' }}
+      
+      <div
+  className="relative w-full m-0 p-0 bg-fit md:bg-contain bg-no-repeat bg-right-bottom h-[1000px] md:h-[1000px] overflow-hidden border-b-8 border-dbm-gr"
+  style={{ backgroundImage: 'url("src/assets/portrait.jpeg")' }}
 >
-  <div className="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
-    {/*Title*/}
-    <p className="text-white font-extrabold text-3xl md:text-5xl">
-      Design by Makai
-    </p>
-    <p className="text-xl md:text-2xl text-gray-200">Portfolio Showcase</p>
+    <div className="absolute top-0 left-0 text-white flex w-full h-full  m-0 p-0">
+      <div className="h-full w-1/2 md: w-1/3 bg-gray-900">
+        {/* Content of the first div */}
+      </div>
+      <div
+        className="h-full invisible md:visible w-1/4 md:w-1/3 bg-gray-900 diagonal-cut"
+      >
+      </div>
     </div>
-    </div>
+
+    <div   className="absolute left-16 md:left-80 w-1/2" >
+        <div className="container max-w-4xl mx-auto pt-16 md:pt-32 text-left break-normal">
+        {/*Title*/}
+        <p className="text-gray-200 font-extrabold text-3xl md:text-5xl">
+          Design by Makai
+        </p>
+        <p className="text-xl md:text-2xl text-gray-200">Portfolio Showcase</p>
+        
+        </div>
+        <p className="absolute pt-10 md:pr-20"> Est ea qui non do incididunt deserunt quis eiusmod exercitation consequat esse culpa ipsum nulla adipisicing. Dolore occaecat velit enim excepteur minim amet laborum dolore incididunt. Dolor nulla anim irure fugiat. Commodo sint eiusmod pariatur laboris. Incididunt quis non cillum voluptate do veniam.</p>
+      </div>
+  
+</div>
     )
 }
 export function BannerWorks() {
@@ -53,12 +70,34 @@ style={{ backgroundImage: 'url("/cover3.jpg")' }}
 }
 
 export function Nav() {
-    return(
-<nav className="mt-0 w-full">
-  <div className="container mx-auto flex flex-initial items-center w-full">
-    <div className="flex w-1/2 text-sm text-center z-10">
-      <ul className="list-reset flex flex-col sm:flex-row flex-auto items-start">
-        <li className="mr-2">
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Define breakpoints matching Tailwind's defaults
+      const mdBreakpoint = 768; // Tailwind's 'md' breakpoint
+      let scrollYTrigger = 900; // Default value
+
+      // Adjust the scrollYTrigger based on the screen width
+      if (window.innerWidth < mdBreakpoint) {
+        scrollYTrigger = 400; // Example value for smaller screens
+      }
+
+      const isTop = window.scrollY < scrollYTrigger;
+      setIsSticky(!isTop);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+
+  }, []);
+
+return(
+  <nav className={`${isSticky ? 'fixed inset-0' : 'sticky top-0'} bg-gray-900 z-50 h-12 `}>
+    <div className={`${isSticky ? 'max-w-full' : 'container'} mx-auto flex flex-initial items-center transition-all duration-700 ease-in-out`}>
+      <div className="flex w-1/2 text-sm text-center z-10">
+        <ul className="list-reset flex flex-col sm:flex-row flex-auto items-start">
+      <li className="mr-2">
         <Tippy content="My latest projects">
           <NavLink 
             to="/"

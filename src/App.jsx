@@ -21,6 +21,9 @@ import Digital from './pages/gallery/Digital';
 import Photography from './pages/gallery/Photography';
 import Midjourney from './pages/gallery/Midjourney';
 import Modeling from './pages/gallery/Modeling';
+import { CardPop } from './components/CardPops';
+import Skills from './components/Skills';
+import AboutMe from './components/AboutMe';
 
 
 
@@ -33,7 +36,11 @@ function Home() {
           <div className="mx-0 sm:mx-6">
           <Nav />
           <Spotlight />
-          </div>
+          </div> </div>
+          <CardPop />
+          <Skills />
+          <div className="container px-4 md:px-0 max-w-6xl mx-auto -mt-32 mt-10">
+          <AboutMe />
         <Author />
         </div>
       <Footer />

@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 export default function Modeling() {
     const Images = [
         "https://i.ibb.co/RTS8Nrb/beauty-rend-side.png",
@@ -27,27 +29,46 @@ export default function Modeling() {
         "https://i.ibb.co/MBVX3Xk/front-view-cycle.png",
         "https://i.ibb.co/KbmnHSm/compare.png",
         
-    ]
+    ];
+
+    const [currentPage, setCurrentPage] = useState(0);
+    const imagesPerPage = 8;
+    const totalPages = Math.ceil(Images.length / imagesPerPage);
+  
+    const startIndex = currentPage * imagesPerPage;
+    const endIndex = startIndex + imagesPerPage;
+    const currentImages = Images.slice(startIndex, endIndex);
+  
+    const goToNextPage = () => {
+      setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPages - 1));
+    };
+  
+    const goToPreviousPage = () => {
+      setCurrentPage((prevPage) => Math.max(prevPage - 1, 0));
+    };
+
       return(
-  <section className="text-gray-600 body-font">
-    <div className="container px-5 py-6 mx-auto bg-gray-200 rounded-t">
+  <section className="body-font">
+    <div className="container px-5 py-6 mx-auto rounded-t">
       <div className="flex flex-col text-center w-full mb-20">
-        <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
-          3D Modeling
-        </h1>
         <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-        These are some pictures taken as documentation for projects I was working on for University. Therefore, there are many more projects I have 3D modeled for fun that I didn't take the time to render out properly. I use Blender for all my work as it is quite versatile, though I belive I could pick up another program quite fast if needed.
+        
         </p>
+        <div className="flex justify-center mt-4">
+            <button onClick={goToPreviousPage} disabled={currentPage === 0} className='bg-dbm-pr-200 mr-1 focus:ring text-dmb-w'>Previous</button>
+            <button onClick={goToNextPage} disabled={currentPage === totalPages - 1} className='bg-dbm-pr-200 ml-1 focus:ring text-dbm-w'>Next</button>
+          </div>
       </div>
       <div className="container mx-auto">
         <div className="-m-1 flex flex-wrap md:-m-2">
-          {Images.map((image, index) => (
+          {currentImages.map((image, index) => (
             <div key={index} className="flex w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-1 md:p-2">
               <img className="block mx-auto h-full object-cover object-center rounded-lg shadow-md hover:scale-125" src={image}/>
             </div>
           ))}
         </div>
       </div>
+      
     </div>
   </section>
       )

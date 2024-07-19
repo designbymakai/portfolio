@@ -29,8 +29,8 @@ export default function Midjourney() {
       "https://www.imgbly.com/ib/T7nS8C1WAH",
     ]
       return(
-  <section className="text-gray-600 body-font">
-    <div className="container px-5 py-6 mx-auto bg-gray-200 rounded-t">
+  <section className="body-font">
+    <div className="container px-5 py-6 mx-autorounded-t">
       <div className="flex flex-col text-center w-full mb-20">
         <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
           AI Generated Art

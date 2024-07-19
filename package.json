@@ -2,7 +2,7 @@
   "homepage": "designbymakai.com",
   "name": "my-project",
   "private": true,
-  "version": "0.0.1",
+  "version": "1.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -17,6 +17,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
+    "react-modal": "^3.16.1",
     "react-router-dom": "^6.14.0",
     "tippy.js": "^6.3.7"
   },

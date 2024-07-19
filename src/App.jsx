@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import ScrollToTop from './components/ScrollTop';
-import { Nav, Banner, SmallNav, BannerAbout, BannerWorks } from "./components/Header";
+import { Nav, Banner, SmallNav, BannerAbout, BannerBlog } from "./components/Header";
 import { Author } from "./components/Footer";
 import { Footer } from "./components/Footer";
 
 import Spotlight from "./pages/Home";
-import Gallery from "./pages/Gallery";
+import Blog from "./pages/Blog";
 import About from "./pages/About";
 import FloodCheck from "./pages/posts/FloodCheck";
 import Progress from "./components/Progress";
@@ -17,15 +17,16 @@ import Hourglass from "./pages/posts/Hourglass";
 import Att from "./pages/posts/Att";
 import Illuvion from "./pages/posts/Illuvion";
 import Ripe from "./pages/posts/Ripe";
-import Digital from './pages/gallery/Digital';
-import Photography from './pages/gallery/Photography';
-import Midjourney from './pages/gallery/Midjourney';
-import Modeling from './pages/gallery/Modeling';
+
 import { CardPop } from './components/CardPops';
 import Skills from './components/Skills';
 import AboutMe from './components/AboutMe';
 
-
+import Post1 from './pages/blog/Post-1';
+import Post2 from './pages/blog/Post-2';
+import Post3 from './pages/blog/Post-3';
+import Post4 from './pages/blog/Post-4';
+import Post5 from './pages/blog/Post-5';
 
 function Home() {
   
@@ -40,28 +41,28 @@ function Home() {
           <CardPop />
           <Skills />
           <div className="container px-4 md:px-0 max-w-6xl mx-auto -mt-32 mt-10">
-          <AboutMe />
         <Author />
         </div>
       <Footer />
     </div>
   )
 }
-function Works() {
+function BlogPage() {
   return (
-    <div className= " bg-gray-200 font-sans leading-normal tracking-normal">
-      <BannerWorks />
+    <div className= " bg-dbm-db font-sans leading-normal tracking-normal">
+      <BannerBlog />
         <div className="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
           <div className="mx-0 sm:mx-6">
-          <Nav />
-          <Gallery />
+          <SmallNav />
+          <Blog />
           </div>
-        <Author />
         </div>
-      <Footer />
     </div>
   )
 }
+
+
+
 function DigitalPost() {
   return (
     <div className= " bg-gray-200 font-sans leading-normal tracking-normal">
@@ -128,7 +129,7 @@ function AboutPage() {
       <BannerAbout />
         <div className="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
           <div className="mx-0 sm:mx-6">
-          <Nav />
+          <SmallNav />
           <About />
           </div>
         <Author />
@@ -222,7 +223,7 @@ function App() {
     <Router>
       <Routes>
         <Route index path="/" element={<Home />} />
-        <Route path="/works" element={<Works />} />
+        <Route path="/blog" element={<BlogPage />} />
         <Route path="/about" element={<AboutPage />} />
       </Routes>
       <ScrollToTop>
@@ -238,6 +239,18 @@ function App() {
         <Route path="/photography" element={<PhotoPost />} />
         <Route path="/ai-art" element={<MidPost />} />
         <Route path="/modeling" element={<ModelPost />} />
+      </Routes>
+      </ScrollToTop>
+      <ScrollToTop>
+      <Routes>
+        <Route path="/post-1" element={<Post1 />} />
+        <Route path="/post-2" element={<Post2 />} />
+        <Route path="/post-3" element={<Post3 />} />
+        <Route path="/post-4" element={<Post4 />} />
+        <Route path="/post-5" element={<Post5 />} />
+
+
+
 
       </Routes>
       </ScrollToTop>

@@ -16,7 +16,7 @@ export function Author() {
   </div>
   <div className="justify-end">
     <Link to="/about">
-      <button className="bg-transparent border border-gray-500 hover:border-green-500 text-xs text-gray-500 hover:text-green-500 font-bold py-2 px-4 rounded-full">
+      <button className="bg-transparent border border-dbm-db hover:border-dbm-lb-200 text-xs text-dbm-db hover:text-dbm-lb-200 font-bold py-2 px-4 rounded-full">
         Read More
       </button>
     </Link>
@@ -49,13 +49,13 @@ export function Footer() {
           </li>
           <li>
             <NavLink 
-            to="/works"
+            to="/blog"
             className={({isActive}) => 
                 isActive ? 'inline-block py-2 px-2 text-white no-underline hover:text-gray-200' : 'inline-block text-gray-500 no-underline hover:text-indigo-500 py-2 px-2'
             
         }
             >
-            Works
+            Blog
           </NavLink>
           </li>
           <li>

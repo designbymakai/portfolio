@@ -2,52 +2,61 @@ import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css'; // optional
 import { BrowserRouter as Router, Routes, Route, Link, NavLink } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
-
+import './styles.css';
 
 export function Banner() {
-    return (
-      
-      <div
-  className="relative w-full m-0 p-0 bg-fit md:bg-contain bg-no-repeat bg-right-bottom h-[1000px] md:h-[1000px] overflow-hidden border-b-8 border-dbm-gr"
-  style={{ backgroundImage: 'url("src/assets/portrait.jpeg")' }}
->
-    <div className="absolute top-0 left-0 text-white flex w-full h-full  m-0 p-0">
-      <div className="h-full w-1/2 md: w-1/3 bg-gray-900">
-        {/* Content of the first div */}
+  return (
+    <div
+      className="relative w-full m-0 p-0 bg-fit md:bg-contain bg-no-repeat bg-right-bottom h-[1000px] md:h-[1000px] overflow-hidden border-b-8 border-dbm-gr"
+      style={{ backgroundImage: 'url("src/assets/portrait.jpeg")' }}
+    >
+      <div className="absolute top-0 left-0 text-white flex w-full h-full  m-0 p-0">
+        <div className="h-full w-1/2 md:w-1/3 bg-gray-900">
+          {/* Content of the first div */}
+        </div>
+        <div className="h-full invisible md:visible w-1/4 md:w-1/3 bg-gray-900 diagonal-cut">
+        </div>
       </div>
-      <div
-        className="h-full invisible md:visible w-1/4 md:w-1/3 bg-gray-900 diagonal-cut"
-      >
+
+      <div className="absolute left-16 md:left-80 w-1/2">
+        <div className="container max-w-4xl mx-auto pt-16 md:pt-32 text-left break-normal">
+          {/*Title*/}
+          <p className="text-gray-200 font-extrabold text-3xl md:text-5xl flex items-center">
+            Design by Makai
+            {/* Boat Container */}
+            <div className="boat-container ml-4">
+              <img
+                src="src/assets/boat-bottom.png"
+                alt="Boat Bottom"
+                className="boat-bottom"
+              />
+              <img
+                src="src/assets/boat-top.png"
+                alt="Boat Top"
+                className="boat-top"
+              />
+            </div>
+          </p>
+          <p className="text-xl md:text-2xl text-gray-200">Portfolio Showcase</p>
+        </div>
+        <p className="absolute pt-10 md:pr-20">
+          Est ea qui non do incididunt deserunt quis eiusmod exercitation consequat esse culpa ipsum nulla adipisicing. Dolore occaecat velit enim excepteur minim amet laborum dolore incididunt. Dolor nulla anim irure fugiat. Commodo sint eiusmod pariatur laboris. Incididunt quis non cillum voluptate do veniam.
+        </p>
       </div>
     </div>
+  );
+};
 
-    <div   className="absolute left-16 md:left-80 w-1/2" >
-        <div className="container max-w-4xl mx-auto pt-16 md:pt-32 text-left break-normal">
-        {/*Title*/}
-        <p className="text-gray-200 font-extrabold text-3xl md:text-5xl">
-          Design by Makai
-        </p>
-        <p className="text-xl md:text-2xl text-gray-200">Portfolio Showcase</p>
-        
-        </div>
-        <p className="absolute pt-10 md:pr-20"> Est ea qui non do incididunt deserunt quis eiusmod exercitation consequat esse culpa ipsum nulla adipisicing. Dolore occaecat velit enim excepteur minim amet laborum dolore incididunt. Dolor nulla anim irure fugiat. Commodo sint eiusmod pariatur laboris. Incididunt quis non cillum voluptate do veniam.</p>
-      </div>
-  
-</div>
-    )
-}
-export function BannerWorks() {
+export function BannerBlog() {
   return (
       <div
-className="w-full m-0 p-0 bg-cover bg-center h-[300px] md:h-[460px]"
-style={{ backgroundImage: 'url("/cover2.jpg")' }}
+className="w-full m-0 p-0 bg-dbm-db bg-center h-[200px] md:h-[250px]"
 >
-<div className="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
+<div className="container max-w-4xl mx-auto pt-4 md:pt-8 text-center break-normal">
   {/*Title*/}
   <p className="text-white font-extrabold text-3xl md:text-5xl">
-    Design by Makai
+    Capstone Blog
   </p>
-  <p className="text-xl md:text-2xl text-gray-200">Artwork Showcase</p>
   </div>
   </div>
   )
@@ -55,8 +64,7 @@ style={{ backgroundImage: 'url("/cover2.jpg")' }}
 export function BannerAbout() {
   return (
       <div
-className="w-full m-0 p-0 bg-cover bg-center h-[300px] md:h-[460px]"
-style={{ backgroundImage: 'url("/cover3.jpg")' }}
+className="w-full m-0 p-0 bg-dbm-db h-[300px] md:h-[460px]"
 >
 <div className="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
   {/*Title*/}
@@ -111,15 +119,15 @@ return(
         </Tippy>
         </li>
         <li className="mr-2">
-        <Tippy content="Showcase of my art">
+        <Tippy content="Blogging progress and documentation of my Capstone project">
         <NavLink 
-            to="/works"
+            to="/blog"
             className={({isActive}) => 
                 isActive ? 'inline-block py-2 px-2 text-white no-underline hover:text-gray-200' : 'inline-block text-gray-500 no-underline hover:text-indigo-500 py-2 px-2'
             
         }
             >
-            Works
+            Blog
           </NavLink>
           </Tippy>
         </li>
@@ -202,28 +210,43 @@ export function SmallNav() {
         <div className="flex pl-4 text-sm">
           <ul className="list-reset flex justify-between flex-1 md:flex-none items-center">
             <li className="mr-2">
-              <Link
-                className="inline-block py-2 px-2 text-gray-100 no-underline hover:text-indigo-500"
-                to="/"
-              >
-              Spotlight
-              </Link>
-            </li>
-            <li className="mr-2">
-              <Link
-                to="/works"
-                className="inline-block text-gray-500 no-underline hover:text-indigo-500 hover:text-underline py-2 px-2"
-              >
-                  Works
-              </Link>
-            </li>
-            <li className="mr-2">
-              <Link
-              to="/about"
-              className="inline-block text-gray-500 no-underline hover:text-indigo-500 hover:text-underline py-2 px-2"
-              >
-                  About Me
-              </Link>
+            <Tippy content="My latest projects">
+          <NavLink 
+            to="/"
+            className={({isActive}) => 
+                isActive ? 'inline-block py-2 px-2 text-white no-underline hover:text-gray-200' : 'inline-block text-gray-500 no-underline hover:text-indigo-500 py-2 px-2'
+            
+        }
+            >
+            Spotlight
+          </NavLink>
+        </Tippy>
+        </li>
+        <li className="mr-2">
+        <Tippy content="Blogging progress and documentation of my Capstone project">
+        <NavLink 
+            to="/blog"
+            className={({isActive}) => 
+                isActive ? 'inline-block py-2 px-2 text-white no-underline hover:text-gray-200' : 'inline-block text-gray-500 no-underline hover:text-indigo-500 py-2 px-2'
+            
+        }
+            >
+            Blog
+          </NavLink>
+          </Tippy>
+        </li>
+        <li className="mr-2">
+        <Tippy content="My story & skills">
+        <NavLink 
+            to="/about"
+            className={({isActive}) => 
+                isActive ? 'inline-block py-2 px-2 text-white no-underline hover:text-gray-300' : 'inline-block text-gray-500 no-underline hover:text-indigo-500 py-2 px-2'
+            
+        }
+            >
+            About Me
+          </NavLink>
+          </Tippy>
             </li>
           </ul>
         </div>

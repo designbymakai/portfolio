@@ -16,12 +16,12 @@ export function Banner() {
             {/* Boat Container */}
             <div className="boat-container ml-4">
               <img
-                src="public/boat-bottom.png"
+                src="/boat-bottom.png"
                 alt="Boat Bottom"
                 className="boat-bottom"
               />
               <img
-                src="public/boat-top.png"
+                src="/boat-top.png"
                 alt="Boat Top"
                 className="boat-top"
               />
@@ -37,7 +37,7 @@ export function Banner() {
       {/* Right Section */}
       <div
         className="md:w-4/12 sm:w-1/4 bg-cover bg-center"
-        style={{ backgroundImage: 'url("public/portrait.jpeg")' }}
+        style={{ backgroundImage: 'url("/portrait.jpeg")' }}
       >
         <div
         className="md:w-1/12 bg-dbm-db"

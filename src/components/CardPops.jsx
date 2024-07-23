@@ -5,7 +5,7 @@ export function CardPop() {
     return(
 <section className='w-full bg-dbm-db border-y-4 border-dbm-gr mt-8'>
         <h1 className='text-center font-extrabold text-dbm-lb-100 uppercase'>My Values</h1>
-        <div className="flex flex-wrap justify-center bg-dbm-db w-3/4 m-auto">
+        <div className="flex flex-wrap justify-center bg-dbm-db sm:w-full md:w-3/4 m-auto">
   {/* card 1 */}
         
   <div className="p-4 max-w-sm">

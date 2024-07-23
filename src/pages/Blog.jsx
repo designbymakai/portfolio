@@ -88,7 +88,7 @@ export default function Blog() {
         </div>
         <div className="flex flex-wrap -m-4">
           {posts.map((post) => (
-            <div key={post.id} className="lg:w-1/3 sm:w-1/2 p-4">
+            <div key={post.id} className="md:w-1/3 w-full p-4">
               <div className="flex relative w-full h-64">
                 <img
                   alt="post"

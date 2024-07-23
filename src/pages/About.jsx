@@ -22,7 +22,7 @@ return (
 
 <div className="flex flex-wrap justify-center bg-gray-200 rounded-t overflow-auto z-50">
     <div className="w-full flex justify-center">
-        <div className="flex justify-center">
+        <div className="flex justify-center md:pt-0 pt-20">
             <img    
             src="https://i.ibb.co/cQ95fK9/profile.png"
             className="shadow-xl rounded-full align-middle border-2 border-gray-300 absolute max-w-[150px] hover:scale-110 -m-16"
@@ -73,23 +73,23 @@ return (
                 <Tab.Panel>
                 <div className="container pt-3 pb-24">
                     <p className="text-xl font-bold block tracking-wide text-slate-700 uppercase">Get in touch</p>
-                    <div className="flex">
-                        <div className="flex flex-col w-1/2">
+                    <div className="flex md:flex-row flex-col">
+                            <div className="flex flex-col justify-center w-1/3">
                             <div className="flex flex-row mx-auto">
                                 <FaMapMarkerAlt className="m-auto p-auto flex-none hover:scale-110"/>
                                 <p className="text-gray-900 font-light text-lg px-2 flex-none">Location:</p>
                             </div>
                                 <p className=" text-indigo-500 font-light text-lg px-3 rounded-xl mx-auto bg-gray-300 hover:text-green-500">Auckland, New Zealand</p>
                         </div>
-                        <div className="flex w-full tracking-wide flex-row justify-center">
-                            <div className="flex flex-col w-1/2">
+                        
+                            <div className="flex flex-col justify-center w-1/3">
                                 <div className="flex flex-row mx-auto">
                                     <FaPhoneAlt className="m-auto p-auto flex-none hover:scale-110" />
                                     <p className="text-gray-900 font-light text-lg px-2 flex-none">Phone:</p>
                                 </div>
                                 <p className="text-indigo-500 font-light text-lg px-3 rounded-xl mx-auto bg-gray-300 self-start hover:text-green-500">+64 021 467 456</p>
                             </div>
-                            <div className="flex flex-col w-1/2">
+                            <div className="flex flex-col justify-center w-1/3">
                                 <div className="flex flex-row mx-auto">
                                     <FaPenAlt className="m-auto p-auto flex-none hover:scale-110" />
                                     <p className="text-gray-900 font-light text-lg capitalize px-3">Email:</p>
@@ -97,7 +97,7 @@ return (
                                 <p className="text-indigo-500 font-light text-lg px-3 rounded-xl mx-auto bg-gray-300 hover:text-green-500">makaizaneingalls@gmail.com</p>
                             </div>
 
-                        </div>
+                        
                     </div>
                     <div className='pt-6'>
                     <MapContainer center={[-36.8485, 174.7633]} zoom={13} style={{ height: '400px', width: '100%' }}>

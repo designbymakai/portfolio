@@ -80,6 +80,7 @@ button:focus-visible {
 .diagonal-cut::after {
   content: '';
   position: absolute;
+  z-index: 0;
   bottom: 0;
   left: 0;
   width: 100%;

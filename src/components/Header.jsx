@@ -11,7 +11,7 @@ export function Banner() {
       <div className=" md:w-7/12 sm:w-3/4 bg-dbm-db flex flex-col justify-center p-8">
         <div className="container max-w-4xl mx-auto text-left break-normal">
           {/*Title*/}
-          <p className="text-gray-200 font-extrabold text-3xl md:text-5xl flex items-center">
+          <p className="text-gray-200 font-extrabold text-3xl md:text-5xl flex items-center lora-font">
             Design by Makai
             {/* Boat Container */}
             <div className="boat-container ml-4">
@@ -115,7 +115,7 @@ return(
             
         }
             >
-            Spotlight
+            Home
           </NavLink>
         </Tippy>
         </li>
@@ -204,25 +204,16 @@ export function SmallNav() {
         <div className="flex text-white font-extrabold">
           <p className="flex text-white text-base no-underline hover:text-green-500 hover:no-underline">
             <span className="hidden w-0 md:w-auto md:block pl-1">
+              <NavLink 
+            to="/"> 
               Design by Makai
+              </NavLink>
             </span>
           </p>
         </div>
         <div className="flex pl-4 text-sm">
           <ul className="list-reset flex justify-between flex-1 md:flex-none items-center">
-            <li className="mr-2">
-            <Tippy content="My latest projects">
-          <NavLink 
-            to="/"
-            className={({isActive}) => 
-                isActive ? 'inline-block py-2 px-2 text-white no-underline hover:text-gray-200' : 'inline-block text-gray-500 no-underline hover:text-indigo-500 py-2 px-2'
             
-        }
-            >
-            Spotlight
-          </NavLink>
-        </Tippy>
-        </li>
         <li className="mr-2">
         <Tippy content="Blogging progress and documentation of my Capstone project">
         <NavLink 

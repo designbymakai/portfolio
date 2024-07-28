@@ -22,39 +22,29 @@ export default function Spotlight() {
 <>
 <div>
       {/* Posts Container */}
-      <div className="relative flex h-full rounded flex-wrap overflow-hidden justify-between  -mx-6">
+      <div className="relative flex h-full flex-wrap overflow-hidden justify-between  -mx-6">
 
         {/* Card 1 */}
         <div className="w-full md:w-full flex flex-col flex-grow flex-shrink px-6">
-          <div className="flex-1 flex-row bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+          <div className="flex-1 flex-row bg-white rounded-b-none overflow-hidden shadow-lg">
             <div
               onClick={() => openModal('Understanding Users, Prototyping, and Usability Testing')}
               className="flex flex-wrap no-underline hover:no-underline cursor-pointer"
             >
               <img
                 src="https://www2.shutterstock.com/blog/wp-content/uploads/sites/5/2017/04/featured-tools.png"
-                className="h-full w-full rounded-t pb-6"
+                className="h-full w-full pb-6"
               />
               <p className="w-full text-gray-600 text-xs md:text-sm px-6 uppercase">UI/UX Design</p>
               <div className="w-full font-bold text-xl text-gray-900 px-6">
                 Understanding Users, Prototyping, and Usability Testing
               </div>
-              <p className="text-gray-800 font-serif text-base px-6 mb-5">
+              <p className="text-gray-800 px-6 mb-5">
                 I have plenty of experience through my degree of learning how to understand the user better. This includes market research, creating personas and empathy maps, and any other tools I can incorporate to understand the user's needs. I also am well versed in prototyping and using wireframes, mockups, and high fidelity prototypes to test usability and use this feedback to improve the design.
               </p>
             </div>
           </div>
-          <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
-            <div className="flex items-center justify-between">
-              <Tippy content="University Project">
-                <img
-                  className="w-8 h-8 rounded-full mr-4 avatar"
-                  src="https://via.placeholder.com/50"
-                  alt="University of Auckland logo"
-                />
-              </Tippy>
-            </div>
-          </div>
+          
         </div>
 
         {/* Card 2 */}
@@ -72,22 +62,12 @@ export default function Spotlight() {
               <div className="w-full font-bold text-xl text-gray-900 px-6">
                 Web Development and Design
               </div>
-              <p className="text-gray-800 font-serif text-base px-6 mb-5">
+              <p className="text-gray-800  px-6 mb-5">
                 I have experience in developing and designing websites using various technologies such as HTML, CSS, JavaScript, and React. I focus on creating responsive and user-friendly interfaces.
               </p>
             </div>
           </div>
-          <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
-            <div className="flex items-center justify-between">
-              <Tippy content="Personal Project">
-                <img
-                  className="w-8 h-8 rounded-full mr-4 avatar"
-                  src="https://via.placeholder.com/50"
-                  alt="Personal Project logo"
-                />
-              </Tippy>
-            </div>
-          </div>
+          
         </div>
 
         {/* Card 3 */}
@@ -105,22 +85,12 @@ export default function Spotlight() {
               <div className="w-full font-bold text-xl text-gray-900 px-6">
                 Graphic Design and Branding
               </div>
-              <p className="text-gray-800 font-serif text-base px-6 mb-5">
+              <p className="text-gray-800  px-6 mb-5">
                 I have a strong background in graphic design and branding, creating visually appealing designs that effectively communicate the brand's message. My skills include logo design, typography, and color theory.
               </p>
             </div>
           </div>
-          <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
-            <div className="flex items-center justify-between">
-              <Tippy content="Freelance Project">
-                <img
-                  className="w-8 h-8 rounded-full mr-4 avatar"
-                  src="https://via.placeholder.com/50"
-                  alt="Freelance Project logo"
-                />
-              </Tippy>
-            </div>
-          </div>
+          
         </div>
       </div>
 

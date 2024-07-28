@@ -71,10 +71,10 @@ export default function Blog() {
     <section className="text-gray-600 body-font">
       <div className="container px-5 py-6 mx-auto bg-dbm-w rounded-t">
         <div className="flex flex-col text-center w-full mb-20">
-          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
+          <h1 className="sm:text-3xl text-2xl font-medium mb-4 text-gray-900">
             Blog
           </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
+          <p className="lg:w-2/3 mx-auto leading-relaxed text-lg">
             Blog for my final semester of Design at UoA. Here I will be posting about my progress and thoughts on my capstone project studying ADHD adults in the workplace.
           </p>
         </div>
@@ -86,7 +86,7 @@ export default function Blog() {
             <FontAwesomeIcon icon={faSortAmountDown} />
           </button>
         </div>
-        <div className="flex flex-wrap -m-4">
+        <div className="flex flex-wrap -m-2">
           {posts.map((post) => (
             <div key={post.id} className="md:w-1/3 w-full p-4">
               <div className="flex relative w-full h-64">

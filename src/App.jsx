@@ -31,7 +31,7 @@ import Post5 from './pages/blog/Post-5';
 function Home() {
   
   return (
-    <div className= " bg-gray-200 font-sans leading-normal tracking-normal">
+    <div className= " bg-gray-200 dosis-font font-sans leading-normal tracking-normal">
       <Banner />
         <div className="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
           <div className="mx-0 sm:mx-6">
@@ -49,7 +49,7 @@ function Home() {
 }
 function BlogPage() {
   return (
-    <div className= " bg-dbm-db font-sans leading-normal tracking-normal">
+    <div className= " bg-dbm-db dosis-font font-sans leading-normal tracking-normal">
       <BannerBlog />
         <div className="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
           <div className="mx-0 sm:mx-6">
@@ -65,7 +65,7 @@ function BlogPage() {
 
 function DigitalPost() {
   return (
-    <div className= " bg-gray-200 font-sans leading-normal tracking-normal">
+    <div className= " bg-gray-200 dosis-font font-sans leading-normal tracking-normal">
       <BannerWorks />
         <div className="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
           <div className="mx-0 sm:mx-6">
@@ -80,7 +80,7 @@ function DigitalPost() {
 }
 function PhotoPost() {
   return (
-    <div className= " bg-gray-200 font-sans leading-normal tracking-normal">
+    <div className= " bg-gray-200 dosis-font font-sans leading-normal tracking-normal">
       <BannerWorks />
         <div className="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
           <div className="mx-0 sm:mx-6">
@@ -125,8 +125,8 @@ function ModelPost() {
 }
 function AboutPage() {
   return (
-    <div className= " bg-gray-200 font-sans leading-normal tracking-normal">
-      <BannerAbout />
+    <div className= " bg-gray-200 font-sans dosis-font leading-normal tracking-normal">
+      <BannerAbout /> 
         <div className="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
           <div className="mx-0 sm:mx-6">
           <SmallNav />

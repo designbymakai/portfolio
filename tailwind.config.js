@@ -5,6 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontSize: {
+      sm: '0.9rem',
+      base: '1.1rem',
+      xl: '1.35rem',
+      '2xl': '1.663rem',
+      '3xl': '2.053rem',
+      '4xl': '2.541rem',
+      '5xl': '3.152rem',
+    },
     extend: {
       colors: {
         'dbm-db': '#101827',

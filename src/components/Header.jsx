@@ -29,7 +29,7 @@ export function Banner() {
           </p>
           <p className="text-xl md:text-2xl text-gray-200">Portfolio Showcase</p>
           <p className="pt-10 md:pr-20 text-gray-200">
-          Est ea qui non do incididunt deserunt quis eiusmod exercitation consequat esse culpa ipsum nulla adipisicing. Dolore occaecat velit enim excepteur minim amet laborum dolore incididunt. Dolor nulla anim irure fugiat. Commodo sint eiusmod pariatur laboris. Incididunt quis non cillum voluptate do veniam.
+          As an American-Kiwi dual citizen, I am a dedicated and versatile designer ready to bring fresh perspectives and high standards to your team. Currently finishing my design degree at the University of Auckland, I have cultivated a diverse skill set in UX/UI, graphic design, 3D modeling, web design, product design, and brand design. My freelance experience in logo and web design has honed my ability to balance function and aesthetics effectively. I am proficient in a range of tools, including the Adobe Suite, and have a keen interest in emerging technologies such as VR and AR. With a passion for learning and a commitment to excellence, I am open to opportunities worldwide and eager to contribute to innovative projects.
         </p>
         </div>
         

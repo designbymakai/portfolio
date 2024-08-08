@@ -53,7 +53,7 @@ export default function Digital() {
           <div className="-m-1 flex flex-wrap md:-m-2">
             {currentImages.map((image, index) => (
               <div key={index} className="flex w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-1 md:p-2">
-                <img className="block mx-auto h-full object-cover object-center rounded-lg shadow-md hover:scale-125" src={image}/>
+                <img className="block mx-auto h-full object-cover object-center rounded-lg shadow-md hover:scale-125" src={image} loading='lazy'/>
               </div>
             ))}
           </div>

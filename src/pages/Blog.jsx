@@ -17,9 +17,9 @@ export default function Blog() {
     {
       id: 2,
       title: 'Blog Post 2',
-      description: 'Coming soon',
+      description: 'Blog post using CARL reflective framework.',
       date: '2024-08-19',
-      image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F001%2F970%2F338%2Flarge_2x%2Fbuilding-under-construction-site-free-vector.jpg&f=1&nofb=1&ipt=80089e9b22d3da2c11ca37b6e3b3110df4d8bd0f4eb5ce91e5a92f6f81d06a52&ipo=images',
+      image: 'https://www.ed.ac.uk/files/styles/landscape_breakpoints_theme_uoe_mobile_1x/public/thumbnails/image/carl_acronym_600x600_0.png?itok=vj_QlWRt',
       link: '/post-2',
     },
     {

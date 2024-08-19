@@ -20,7 +20,7 @@ export default function Post2() {
 
   return (
     <div className="bg-dbm-db" style={{
-      backgroundImage: `url("https://www.ed.ac.uk/files/styles/landscape_breakpoints_theme_uoe_mobile_1x/public/thumbnails/image/carl_acronym_600x600_0.png?itok=vj_QlWRt")`,
+      backgroundImage: `url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.nicepng.com%2Fpng%2Ffull%2F24-247272_background-pattern-s-white-background-pattern-png.png&f=1&nofb=1&ipt=c3ab985f59c9a27f5209914d633f6e4b39db10b5862691d588a1448b47697042&ipo=images")`,
       backgroundRepeat: 'repeat, no-repeat',
       backgroundSize: 'auto, cover'
     }}>
@@ -49,7 +49,7 @@ export default function Post2() {
     className="container w-full max-w-6xl mx-auto bg-dbm-w bg-cover bg-center mt-8 rounded"
     style={{
       backgroundImage:
-        'url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F001%2F970%2F338%2Flarge_2x%2Fbuilding-under-construction-site-free-vector.jpg&f=1&nofb=1&ipt=80089e9b22d3da2c11ca37b6e3b3110df4d8bd0f4eb5ce91e5a92f6f81d06a52&ipo=images")',
+        'url("https://www.ed.ac.uk/files/styles/landscape_breakpoints_theme_uoe_mobile_1x/public/thumbnails/image/carl_acronym_600x600_0.png?itok=vj_QlWRt")',
       height: "75vh"
     }}
   />

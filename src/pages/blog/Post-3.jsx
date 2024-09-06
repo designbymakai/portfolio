@@ -49,7 +49,7 @@ export default function Post3() {
     className="container w-full max-w-6xl mx-auto bg-dbm-w bg-cover bg-center mt-8 rounded"
     style={{
       backgroundImage:
-        'url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F001%2F970%2F338%2Flarge_2x%2Fbuilding-under-construction-site-free-vector.jpg&f=1&nofb=1&ipt=80089e9b22d3da2c11ca37b6e3b3110df4d8bd0f4eb5ce91e5a92f6f81d06a52&ipo=images")',
+        'url("https://www.ed.ac.uk/files/styles/landscape_breakpoints_theme_uoe_mobile_1x/public/thumbnails/image/carl_acronym_600x600_0.png?itok=vj_QlWRt")',
       height: "75vh"
     }}
   />
@@ -62,11 +62,38 @@ export default function Post3() {
       >
         {/*Post Content*/}
           {/*Lead Para*/}
-          <p className="text-2xl md:text-3xl mb-5">
-            📝 Blog 3 Checkpoint 
+          <p className="text-2xl md:text-3xl mb-5 lora-font">
+            📝 
+            Blog Post #3 - Iterating Features and Branding for "Butterfly"
           </p>
+          <hr/>
+          <p className="pt-6 text-2xl lora-font">Context:
+          </p>
+          <p className="py-6"> In the past few weeks, I’ve been diving deeper into the development of my capstone app, Butterfly, which focuses on productivity for adults with ADHD. A key part of this process has been iterating on core features like the calendar system and integrating the ChatGPT API. In addition, I have refined the visual branding of the app, focusing on design strategies that cater to neurodivergent audiences. I’ve also spent time refining my capstone report, making significant adjustments to the abstract and positionality sections, while reviewing my literature review.</p>
+          
+          <p className="pt-6 text-2xl lora-font">Action:</p>
+
           <p className="py-6">
-Coming Soon          </p>
+
+          I tackled several major technical challenges, starting with implementing a calendar system using the React Big Calendar library. This involved extensive research and going through documentation and YouTube tutorials to ensure I could build out a customizable event creation system. I also incorporated a drag-and-drop feature, which aligns with my goal of maintaining user-friendly interactions. In parallel, I integrated ChatGPT into the app by using its API, a process that took several attempts before I successfully established a working interaction system. <br/> <br/>  
+          
+          On the design side, I solidified the app’s branding by finalizing the color scheme, inspired by principles for designing for neurodivergent users. I focused on subtle color contrasts and consistent, bright color usage to create an inviting and easy-to-navigate interface. The tentative title Butterfly felt like a perfect fit, symbolizing the flighty nature of ADHD attention while remaining light-hearted and memorable. <br/> <br/> 
+
+          For the report, I rewrote my abstract and positionality to better align with the project’s focus on ADHD. The literature review has also undergone some refinement, although I’m still determining if additional material is needed.
+
+            
+          </p>
+          <p className="pt-6 text-2xl lora-font">Result:</p>
+
+          <p className="py-6">
+          Both the calendar system and ChatGPT API integration are now functioning, though they still need refinement. I’m particularly proud of the drag-and-drop event feature in the calendar, as it simplifies interaction, which is essential for my target audience. The app’s branding feels cohesive, and the use of neurodivergent-friendly design principles strengthens the overall accessibility. As for the report, the revised abstract and positionality better reflect my personal connection to the project and ADHD, which is a more honest representation of my goals.
+          </p>
+
+          <p className="pt-6 text-2xl lora-font">Learning:</p>
+
+          <p className="py-6">
+          This phase of the project taught me a lot about perseverance in problem-solving, especially when dealing with complex technical integrations like the ChatGPT API. Spending hours on documentation and tutorials was tedious but rewarding in the long run, as I now have a solid base to refine. Similarly, working on the branding helped me see the importance of not just aesthetics but intentional design choices that meet the needs of my neurodivergent audience. Through revising my capstone report, I also learned the importance of aligning the project’s written components with my own experiences, which strengthens the authenticity of the work.
+          </p>
         {/*/ Post Content*/}
       </div>
     </div>

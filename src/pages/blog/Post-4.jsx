@@ -16,7 +16,7 @@ const getPostLinks = (currentPost) => {
 };
 
 export default function Post4() {
-  const { previousPost, nextPost } = getPostLinks('post-4');
+  const { previousPost, nextPost } = getPostLinks('post-3');
 
   return (
     <div className="bg-dbm-db" style={{
@@ -49,7 +49,7 @@ export default function Post4() {
     className="container w-full max-w-6xl mx-auto bg-dbm-w bg-cover bg-center mt-8 rounded"
     style={{
       backgroundImage:
-        'url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F001%2F970%2F338%2Flarge_2x%2Fbuilding-under-construction-site-free-vector.jpg&f=1&nofb=1&ipt=80089e9b22d3da2c11ca37b6e3b3110df4d8bd0f4eb5ce91e5a92f6f81d06a52&ipo=images")',
+        'url("https://www.ed.ac.uk/files/styles/landscape_breakpoints_theme_uoe_mobile_1x/public/thumbnails/image/carl_acronym_600x600_0.png?itok=vj_QlWRt")',
       height: "75vh"
     }}
   />
@@ -62,12 +62,36 @@ export default function Post4() {
       >
         {/*Post Content*/}
           {/*Lead Para*/}
-          <p className="text-2xl md:text-3xl mb-5">
-            📝 Blog 4 Summative
+          <p className="text-2xl md:text-3xl mb-5 lora-font">
+            📝 
+            Blog Post #3 - Fine-Tuning Features and Early User Feedback
           </p>
+          <hr/>
+          <p className="pt-6 text-2xl lora-font">Context:
+          </p>
+          <p className="py-6"> As I progress with my capstone project, Butterfly, I’ve focused extensively on refining the app’s features, particularly in relation to its AI-powered task management system. Initially, I had aimed to integrate calendar and mail functions that would allow the app to import events from external sources. However, due to time constraints and complexity, I shifted my focus toward making the AI more capable of creating, listing, and altering events directly within the app. In addition, I have been working on the visual identity of the app by designing a new logo and updating the color scheme. I also ran an initial round of user testing with classmates to gather feedback on the current state of the app.</p>
+          
+          <p className="pt-6 text-2xl lora-font">Action:</p>
+
           <p className="py-6">
-Coming Soon          </p>
-         
+
+          One of the biggest challenges I faced was getting the AI to manage tasks more intuitively. While I managed to get it to create and alter events, the interactions require very specific phrasing, making it less fluid than I had hoped. However, I learned a lot about how to structure these interactions and will continue refining them. On the design front, I developed a logo that better represents the app’s identity and adjusted the color scheme to be more cohesive. Furthermore, I conducted initial user testing with classmates, allowing me to observe how others interact with the app and get early impressions of its functionality and design.
+
+            
+          </p>
+          <p className="pt-6 text-2xl lora-font">Result:</p>
+
+          <p className="py-6">
+          The AI is now able to create and modify events, though it still requires fine-tuning to make the interaction more natural and adaptable to varied user inputs. The feedback from classmates during testing was mostly positive, with several noting that the interface is user-friendly and the branding is appealing. However, there are still several features that need work, including making the AI more intuitive and improving the integration of the calendar system. The updated logo and color scheme were well-received, and I feel that they better reflect the tone and purpose of Butterfly.
+
+          </p>
+
+          <p className="pt-6 text-2xl lora-font">Learning:</p>
+
+          <p className="py-6">
+          This stage of the project has reinforced the importance of iteration. While I was initially frustrated by the difficulty of making the AI handle event management smoothly, the process of troubleshooting taught me valuable lessons about how users might interact with the app. The early user testing also showed me how crucial it is to gather external feedback as early as possible, as it highlighted areas that I hadn’t considered before. Overall, while the project still has a way to go, I’m confident that with continued refinement, the core functionality will become more reliable and intuitive for users.
+
+          </p>
         {/*/ Post Content*/}
       </div>
     </div>

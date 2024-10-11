@@ -16,7 +16,7 @@ const getPostLinks = (currentPost) => {
 };
 
 export default function Post4() {
-  const { previousPost, nextPost } = getPostLinks('post-3');
+  const { previousPost, nextPost } = getPostLinks('post-4');
 
   return (
     <div className="bg-dbm-db" style={{
@@ -64,7 +64,7 @@ export default function Post4() {
           {/*Lead Para*/}
           <p className="text-2xl md:text-3xl mb-5 lora-font">
             📝 
-            Blog Post #3 - Fine-Tuning Features and Early User Feedback
+            Blog Post #4 - Fine-Tuning Features and Early User Feedback
           </p>
           <hr/>
           <p className="pt-6 text-2xl lora-font">Context:

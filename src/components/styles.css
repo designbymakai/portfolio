@@ -40,3 +40,51 @@
   height: 100%;
   animation: rotateBoat 5s linear infinite;
 }
+
+.scrolling-text-container {
+  overflow: hidden;
+  text-wrap: wrap;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.scrolling-text {
+  display: inline-block;
+  font-size: 1.2rem;
+  color: #fff;
+  transition: transform 0.1s linear;
+}
+
+.head-span {
+  font-size: 1.4rem;
+  color: #258EA6;
+  
+}
+
+.slider-container {
+  height: 300px !important;
+}
+
+.slider-container .slick-list,
+.slider-container .slick-track {
+  height: 100%;
+}
+
+.slider-container .slick-slide > div {
+  height: 100%;
+}
+
+.slider-container .slick-prev,
+.slider-container .slick-next {
+  z-index: 1;
+}
+
+.slider-container .slick-prev {
+  left: 10px;
+}
+
+.slider-container .slick-next {
+  right: 10px;
+}

@@ -19,7 +19,7 @@ export default function Post5() {
   const { previousPost, nextPost } = getPostLinks('post-5');
 
   return (
-    <div className="bg-dbm-db" style={{
+    <div className="bg-dbm-db-100" style={{
       backgroundImage: `url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.nicepng.com%2Fpng%2Ffull%2F24-247272_background-pattern-s-white-background-pattern-png.png&f=1&nofb=1&ipt=c3ab985f59c9a27f5209914d633f6e4b39db10b5862691d588a1448b47697042&ipo=images")`,
       backgroundRepeat: 'repeat, no-repeat',
       backgroundSize: 'auto, cover'
@@ -46,7 +46,7 @@ export default function Post5() {
       </div>
   {/*image*/}
   <div
-    className="container w-full max-w-6xl mx-auto bg-dbm-w bg-cover bg-center mt-8 rounded"
+    className="container w-full max-w-6xl mx-auto bg-dbm-w-100 bg-cover bg-center mt-8 rounded"
     style={{
       backgroundImage:
         'url("https://www.ed.ac.uk/files/styles/landscape_breakpoints_theme_uoe_mobile_1x/public/thumbnails/image/carl_acronym_600x600_0.png?itok=vj_QlWRt")',

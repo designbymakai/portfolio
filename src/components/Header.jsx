@@ -1,48 +1,58 @@
+import React, { useEffect, useState } from 'react';
 import Tippy from '@tippyjs/react';
-import 'tippy.js/dist/tippy.css'; // optional
+import 'tippy.js/dist/tippy.css';
 import { BrowserRouter as Router, Routes, Route, Link, NavLink } from 'react-router-dom';
-import React, { useState, useEffect } from 'react';
 import './styles.css';
 
 export function Banner() {
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const textElements = document.querySelectorAll('.scrolling-text');
+      textElements.forEach((element, index) => {
+        const direction = index % 2 === 0 ? 1 : -1;
+        element.style.transform = `translateX(${scrollPosition * direction}px)`;
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
-    <div className="relative w-full m-0 p-0 h-screen md:h-[1000px] overflow-hidden border-b-8 border-dbm-gr bg-dbm-db flex ">
-      {/* Left Section */}
-      <div className=" md:w-7/12 sm:w-3/4 bg-dbm-db flex flex-col justify-center p-8">
+    <div className="w-full m-0 p-0 h-screen overflow-hidden border-b-8 border-dbm-gr-300 bg-dbm-db-100 flex">
+      <div className="md:w-7/12 sm:w-3/4 bg-dbm-db-100 flex flex-col justify-center">
         <div className="container max-w-4xl mx-auto text-left break-normal">
-          {/*Title*/}
-          <p className="text-gray-200 font-extrabold text-3xl md:text-5xl flex items-center lora-font">
-            Design by Makai
-            {/* Boat Container */}
-            <div className="boat-container ml-4">
-              <img
-                src="/boat-bottom.png"
-                alt="Boat Bottom"
-                className="boat-bottom"
-              />
-              <img
-                src="/boat-top.png"
-                alt="Boat Top"
-                className="boat-top"
-              />
-            </div>
-          </p>
-          <p className="text-xl md:text-2xl text-gray-200">Portfolio Showcase</p>
-          <p className="pt-10 md:pr-20 text-gray-200">
-          As an American-Kiwi dual citizen, I am a dedicated and versatile designer ready to bring fresh perspectives and high standards to your team. Currently finishing my design degree at the University of Auckland, I have cultivated a diverse skill set in UX/UI, graphic design, 3D modeling, web design, product design, and brand design. My freelance experience in logo and web design has honed my ability to balance function and aesthetics effectively. I am proficient in a range of tools, including the Adobe Suite, and have a keen interest in emerging technologies such as VR and AR. With a passion for learning and a commitment to excellence, I am open to opportunities worldwide and eager to contribute to innovative projects.
-        </p>
+          <div className="scrolling-text-container">
+            <p className="text-[1.8rem]">
+              Hello, I'm <span className='text-dbm-lb-200 head-span text-[2rem]'>Makai</span>
+            </p>
+            <p className="text-[1.6rem]">
+              Innovative Designer Crafting Solutions That Inspire and Perform
+            </p>
+            <p className="scrolling-text">
+              <span className='head-span'>Versatile</span> and <span className='head-span'>passionate</span> designer, specializing in <span className='head-span'>Innovative</span> solutions that merge <span className='head-span'>creativity </span> with <span className='head-span'>functionality</span>. 
+            </p>
+           
+            <p className="scrolling-text">
+              <span className='head-span'>Multidisciplinary</span> skill set spanning UX/UI, graphic design, web design, 3D modeling, and brand development
+            </p>
+            <p className="scrolling-text">
+              Design practice based in <span className='head-span'>human-centered design</span> principles, honed through <span className='head-span'>real-world projects</span>
+            </p>
+            <p className="scrolling-text">
+              Eager to participate on projects that <span className='head-span'>push boundaries</span> and create <span className='head-span'>meaningful impact</span>
+            </p>
+            <p className="scrolling-text">
+              With a <span className='head-span'>global perspective</span> as an <span className='head-span'>American-Kiwi dual citizen</span>
+            </p>
+          </div>
         </div>
-        
       </div>
-      {/* Right Section */}
       <div
-        className="md:w-4/12 sm:w-1/4 bg-cover bg-center"
+        className="md:w-4/12 sm:w-1/4 bg-cover bg-center relative top-0 h-screen right-10"
         style={{ backgroundImage: 'url("/portrait.jpeg")' }}
       >
-        <div
-        className="md:w-1/12 bg-dbm-db"
-      ></div>
-        
+        <div className="md:w-1/12 bg-dbm-db-100"></div>
       </div>
     </div>
   );
@@ -51,12 +61,12 @@ export function Banner() {
 export function BannerBlog() {
   return (
       <div
-className="w-full m-0 p-0 bg-dbm-db bg-center h-[200px] md:h-[250px]"
+className="w-full m-0 p-0 bg-dbm-db-100 bg-center h-[200px] md:h-[250px]"
 >
 <div className="container max-w-4xl mx-auto pt-4 md:pt-8 text-center break-normal">
   {/*Title*/}
   <p className="text-white font-extrabold text-3xl md:text-5xl">
-    Capstone Blog
+    Showcase
   </p>
   </div>
   </div>
@@ -65,7 +75,7 @@ className="w-full m-0 p-0 bg-dbm-db bg-center h-[200px] md:h-[250px]"
 export function BannerAbout() {
   return (
       <div
-className="w-full m-0 p-0 bg-dbm-db h-[300px] md:h-[460px]"
+className="w-full m-0 p-0 bg-dbm-db-100 h-[300px] md:h-[460px]"
 >
 <div className="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
   {/*Title*/}
@@ -78,7 +88,84 @@ className="w-full m-0 p-0 bg-dbm-db h-[300px] md:h-[460px]"
   )
 }
 
+
+
 export function Nav() {
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollYTrigger = 100; // Adjust this value as needed
+      const isTop = window.scrollY < scrollYTrigger;
+      setIsSticky(!isTop);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <nav className={`${isSticky ? 'fixed top-0 inset-x-0 bg-gray-900' : 'absolute top-0 inset-x-0'} z-50 transition-all duration-700 ease-in-out`}>
+      <div className={`${isSticky ? 'max-w-full px-4 justify-center' : 'container justify-start'} mx-auto flex items-center h-14 transition-all duration-700 ease-in-out`}>
+        <div className="flex items-center drop-shadow-2xl">
+          <img src="/dbm-logo.png" alt="logo" className="h-10 w-10"/>
+        </div>
+        <ul className="list-reset flex items-center space-x-4 ml-4">
+          <li>
+            <Tippy content="My latest projects">
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? 'text-dbm-lb-300 font-bold' : 'text-gray-500 hover:text-dbm-lb-200'
+                }
+              >
+                Home
+              </NavLink>
+            </Tippy>
+          </li>
+          <li>
+            <Tippy content="About me">
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  isActive ? 'text-dbm-lb-300 font-bold' : 'text-gray-500 hover:text-dbm-lb-200'
+                }
+              >
+                About
+              </NavLink>
+            </Tippy>
+          </li>
+          <li>
+            <Tippy content="My portfolio">
+              <NavLink
+                to="/portfolio"
+                className={({ isActive }) =>
+                  isActive ? 'text-dbm-lb-300 font-bold' : 'text-gray-500 hover:text-dbm-lb-200'
+                }
+              >
+                Portfolio
+              </NavLink>
+            </Tippy>
+          </li>
+          <li>
+            <Tippy content="Contact me">
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive ? 'text-dbm-lb-300 font-bold' : 'text-gray-500 hover:text-dbm-lb-200'
+                }
+              >
+                Contact
+              </NavLink>
+            </Tippy>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
+}
+
+export function StickyNav() {
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
@@ -122,13 +209,13 @@ return(
         <li className="mr-2">
         <Tippy content="Blogging progress and documentation of my Capstone project">
         <NavLink 
-            to="/blog"
+            to="/showcase"
             className={({isActive}) => 
                 isActive ? 'inline-block py-2 px-2 text-white no-underline hover:text-gray-200' : 'inline-block text-gray-500 no-underline hover:text-indigo-500 py-2 px-2'
             
         }
             >
-            Blog
+            Showcase
           </NavLink>
           </Tippy>
         </li>
@@ -217,13 +304,13 @@ export function SmallNav() {
         <li className="mr-2">
         <Tippy content="Blogging progress and documentation of my Capstone project">
         <NavLink 
-            to="/blog"
+            to="/showcase"
             className={({isActive}) => 
                 isActive ? 'inline-block py-2 px-2 text-white no-underline hover:text-gray-200' : 'inline-block text-gray-500 no-underline hover:text-indigo-500 py-2 px-2'
             
         }
             >
-            Blog
+            Showcase
           </NavLink>
           </Tippy>
         </li>

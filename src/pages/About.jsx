@@ -20,7 +20,7 @@ const About = () => {
 
 return ( 
 
-<div className="flex flex-wrap justify-center bg-gray-200 rounded-t overflow-auto z-50">
+<div className="flex flex-wrap justify-center bg-gray-200 rounded-t overflow-auto z-50 w-full">
     <div className="w-full flex justify-center">
         <div className="flex justify-center md:pt-0 pt-20">
             <img    

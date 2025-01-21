@@ -69,7 +69,7 @@ export default function Blog() {
 
   return (
     <section className="text-gray-600 body-font">
-      <div className="container px-5 py-6 mx-auto bg-dbm-w rounded-t">
+      <div className="container px-5 py-6 mx-auto bg-dbm-w-100 rounded-t">
         <div className="flex flex-col text-center w-full mb-20">
           <h1 className="sm:text-3xl text-2xl font-medium mb-4 text-gray-900">
             Blog
@@ -99,11 +99,11 @@ export default function Blog() {
                   <h2 className="tracking-widest text-md title-font font-bold text-dbm-pr-200 mb-1 uppercase border-b-2">
                     {post.title}
                   </h2>
-                  <p className="leading-relaxed font-light text-dbm-db">
+                  <p className="leading-relaxed font-light text-dbm-db-100">
                     {post.description}
                   </p>
                   <button className="bottom-4 absolute w-1/2 m-auto left-0 right-0 bg-dbm-pr-200 hover:bg-dbm-pr-300 hover:shadow-lg">
-                    <Link className='text-dbm-w hover:font-bold hover:text-dbm-w' to={post.link}>
+                    <Link className='text-dbm-w-100 hover:font-bold hover:text-dbm-w-100' to={post.link}>
                       View More
                     </Link>
                   </button>

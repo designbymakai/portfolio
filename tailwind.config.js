@@ -8,6 +8,7 @@ export default {
     fontSize: {
       sm: '0.9rem',
       base: '1.1rem',
+      lg: '1.22rem',
       xl: '1.35rem',
       '2xl': '1.663rem',
       '3xl': '2.053rem',
@@ -16,7 +17,14 @@ export default {
     },
     extend: {
       colors: {
-        'dbm-db': '#101827',
+        'dbm-db':  {
+          //100 is main colour
+          100: '#101827',
+          200: '#1C273C',
+          300: '#2B3952',
+          400: '#3D4C67',
+          500: '#51607D'
+        },
         'dbm-lb': {
           // 300 is main colour
           100: '#abe0ec',
@@ -24,8 +32,21 @@ export default {
           300: '#258EA6', 
           400: '#124753'
         },
-        'dbm-gr': '#75704E',
-        'dbm-w': '#E5E7EB',
+        'dbm-gr': {
+          // 300 is main colour
+          100: '#5E5A3F',
+          200: '#6A6547',
+          300: '#75704E',
+          400: '#837E5C',
+          500: '#918C6B'
+        },
+        'dbm-w': {
+          // 100 is main colour
+          100: '#E5E7EB',
+          200: '#CDCFD3',
+          300: '#B6B8BC',
+          400: '#9FA1A4',        
+        },
         'dbm-pr': {
           // 200 is main colour
           100: '#c4add8',

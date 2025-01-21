@@ -16,7 +16,7 @@ export function Author() {
   </div>
   <div className="justify-end">
     <Link to="/about">
-      <button className="bg-transparent border border-dbm-db hover:border-dbm-lb-200 text-xs text-dbm-db hover:text-dbm-lb-200 font-bold py-2 px-4 rounded-full">
+      <button className="bg-transparent border border-dbm-db-100 hover:border-dbm-lb-200 text-xs text-dbm-db-100 hover:text-dbm-lb-200 font-bold py-2 px-4 rounded-full">
         Read More
       </button>
     </Link>

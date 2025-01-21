@@ -19,7 +19,7 @@ export default function Post1() {
   const { previousPost, nextPost } = getPostLinks('post-1');
 
   return (
-    <div className="bg-dbm-db" >
+    <div className="bg-dbm-db-100" >
       {/*Title*/}
       <div className="text-center pt-8 md:pt-10">
         <p className="text-sm md:text-base text-dbm-lb-200 font-bold inline-block">
@@ -42,7 +42,7 @@ export default function Post1() {
       </div>
   {/*image*/}
   <div
-    className="container w-full max-w-6xl mx-auto bg-dbm-w bg-cover bg-center mt-8 rounded"
+    className="container w-full max-w-6xl mx-auto bg-dbm-w-100 bg-cover bg-center mt-8 rounded"
     style={{
       backgroundImage:
         'url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.thebluediamondgallery.com%2Ftablet%2Fimages%2Fblog.jpg&f=1&nofb=1&ipt=3c1dab6d8f5ffff7de0471229a9b381ad28a206f6a0cd03d7e04e5eee5160104&ipo=images")',

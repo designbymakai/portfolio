@@ -20,7 +20,7 @@ export default function Vectors() {
         "https://i.ibb.co/LrYLH38/AT-Tamaraki-copy.png",
         "https://i.ibb.co/2NXh4HX/compass-blueprint.png",
         "https://i.ibb.co/Bzw2sgv/construction-cone.png",
-        "https://i.ibb.co/cb44RNx/dbm-white-copy.png",
+        "https://i.ibb.co/cb44RNx/dbm-w-100hite-copy.png",
         "https://i.ibb.co/h8994Lg/dumpster-alt.png",
         "https://i.ibb.co/fSpKR1F/dumpster-fire-copy.png",
         "https://i.ibb.co/Wp5bb2b/fish-story-backdrop.png",
@@ -56,7 +56,7 @@ export default function Vectors() {
         </p>
         <div className="flex justify-center mt-4">
             <button onClick={goToPreviousPage} disabled={currentPage === 0} className='bg-dbm-pr-200 mr-1 focus:ring text-dmb-w'>Previous</button>
-            <button onClick={goToNextPage} disabled={currentPage === totalPages - 1} className='bg-dbm-pr-200 ml-1 focus:ring text-dbm-w'>Next</button>
+            <button onClick={goToNextPage} disabled={currentPage === totalPages - 1} className='bg-dbm-pr-200 ml-1 focus:ring text-dbm-w-100'>Next</button>
           </div>
       </div>
       <div className="container mx-auto">

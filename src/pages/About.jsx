@@ -20,7 +20,7 @@ const About = () => {
 
 return ( 
 
-<div className="flex flex-wrap justify-center bg-gray-200 rounded-t overflow-auto z-50 w-full">
+<div className="flex flex-wrap justify-center bg-gray-200 rounded-t overflow-auto z-50 w-full" id='about'>
     <div className="w-full flex justify-center">
         <div className="flex justify-center md:pt-0 pt-20">
             <img    
@@ -30,27 +30,28 @@ return (
         </div>
     </div>
     <div className="flex flex-col text-center pt-20">
-        <h3 className="text-2xl text-slate-700 font-bold leading-normal mb-1 border-b-2 m-auto border-gray-300">
+        <h3 className="text-2xl text-dbm-db-300 font-bold leading-normal mb-1 border-b-2 m-auto border-dbm-w-400">
             Makai Ingalls
         </h3>
-        <div className="text-xs mt-0 mb-2 text-slate-400 font-bold uppercase">
-            <i className="fas fa-map-marker-alt mr-2 text-slate-400 opacity-75" />
-            Auckland, New Zealand
+        <div className="text-xs mt-0 mb-2 text-slate-400 font-bold uppercase flex flex-col m-auto">
+            <p className="mr-2 text-dbm-db-500 m-auto flex "> 
+            <FaMapMarkerAlt className=" text-dbm-db-500 m-auto pr-2 text-xl"/> Bainbridge Island, Washington
+            </p>
         </div>
 
         <Tab.Group>
             <Tab.List>
-                <Tab className="ui-selected:bg-indigo-500 ui-selected:text-gray-100 ui-not-selected:bg-gray-100 ui-not-selected:text-gray-800 m-2 hover:text-indigo-500">
+                <Tab className="bg-dbm-db-100 mx-2 hover:dbm-db-400">
                 <div className="flex flex-row mx-auto">
-                        <FaBook className="m-auto p-auto flex-none hover:scale-110 pr-1" />
-                        <p className="">Biography</p>
+                        <FaBook className="m-auto p-auto flex-none hover:scale-110 pr-1 text-lg" />
+                        <p className="text-lg">Biography</p>
                     </div>
                 </Tab>
                 
-                <Tab className="ui-selected:bg-indigo-500 ui-selected:text-gray-100 ui-not-selected:bg-gray-100 ui-not-selected:text-gray-800 m-2">  
+                <Tab className="mx-2 bg-dbm-db-100 hover:dbm-db-400">  
                     <div className="flex flex-row mx-auto">
-                        <FaUser className="m-auto p-auto flex-none hover:scale-110 pr-1" />
-                        <p className="">Contact</p>
+                        <FaUser className="m-auto p-auto flex-none hover:scale-110 pr-1 text-lg" />
+                        <p className="text-lg">Contact</p>
                     </div>
                 </Tab>
             </Tab.List>
@@ -59,11 +60,17 @@ return (
 
                     <div className="flex flex-col text-center pt-3">
                         <div className="flex flex-col w-4/5 justify-center self-center">
-                            <h1 className="text-xl font-bold block tracking-wide text-slate-700 uppercase">
+                            <h1 className="text-2xl font-bold block tracking-wide text-dbm-db-400 uppercase py-4">
                             My Story
                             </h1>
-                            <p className="font-light leading-relaxed text-slate-600 mb-4">
-                                I'm a Kiwi-born and American-raised 22-year-old student at University of Auckland. I grew up with my parents in Washington State in a tiny town called Bainbridge Island. My parents are lifelong sailors, and I grew up living on a sailboat with them. Continuing with the nautical theme, I was a swimmer my whole childhood, a sport that gave me a lot of time to daydream and think. After finishing high school in the US, I moved to NZ by myself. <br/> <br/> I started Uni with a degree in Computer Science as I have had a lifelong love of computers. Unfortunately, my passion didn't transfer over to the programme, and when the pandemic came, it was too much for me, and I dropped the degree. I spent time working in different industries and learning about myself and found out that my whole life, I had been living with undiagnosed ADHD. It took me a while to come to terms with what that meant, but after that, I felt proud of getting so far without knowing. <br/><br/> It took me a while to find my path, but I found I had a gift once I began nursing my creativity. I turned my ADHD, my weakness growing up, into my strength by being able to look at things from a different angle than others and hyper-focus on a task. Additionally, I am a quick learner, whether it's picking up a new program or learning a new industry. I love learning new things and watching my design and art style change as I grow. Once I start a project, I put my all into it. I have a high standard for myself; after all, I spent so long not being proud of my work that once I got a taste, now I strive to go that extra mile every time. 
+                            <p className="text-xl text-dbm-db-300 pb-8 w-11/12 m-auto">
+                            I'm a Kiwi-born and American-raised 22-year-old student at University of Auckland. I grew up with my parents in Washington State in a tiny town called Bainbridge Island. My parents are lifelong sailors, and I grew up living on a sailboat with them. Continuing with the nautical theme, I was a swimmer my whole childhood, a sport that gave me a lot of time to daydream and think. After finishing high school in the US, I moved to NZ by myself. <br /> <br />
+
+I started Uni with a degree in Computer Science as I have had a lifelong love of computers. Unfortunately, my passion didn't transfer over to the programme, and when the pandemic came, it was too much for me, and I dropped the degree. I spent time working in different industries and learning about myself and found out that my whole life, I had been living with undiagnosed ADHD. It took me a while to come to terms with what that meant, but after that, I felt proud of getting so far without knowing. <br /> <br />
+
+It took me a while to find my path, but I found I had a gift once I began nursing my creativity. I turned my ADHD, my weakness growing up, into my strength by being able to look at things from a different angle than others and hyper-focus on a task. Additionally, I am a quick learner, whether it's picking up a new program or learning a new industry. I love learning new things and watching my design and art style change as I grow. Once I start a project, I put my all into it. I have a high standard for myself; after all, I spent so long not being proud of my work that once I got a taste, now I strive to go that extra mile every time. <br />
+
+
                             </p>    
                         </div>     
                     </div>

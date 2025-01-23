@@ -28,51 +28,14 @@ export function Author() {
 
 export function Footer() {
     return(
-<footer className="bg-gradient-to-r from-gray-900 from-10% via-gray-800 via-50% to-gray-900 to-90%">
-  <div className="container max-w-6xl mx-auto flex items-center px-2 py-8">
-    <div className="w-full mx-auto flex flex-wrap items-center">
-      <div className="flex w-full md:w-1/2 justify-center md:justify-start text-white font-extrabold">
-          <span className="text-base text-gray-200">Design by Makai</span>
-      </div>
-      <div className="flex w-full pt-2 content-center justify-between md:w-1/2 md:justify-end">
-        <ul className="list-reset flex justify-center flex-1 md:flex-none items-center">
-          <li>
-            <NavLink 
-            to="/"
-            className={({isActive}) => 
-                isActive ? 'inline-block py-2 px-2 text-white no-underline hover:text-gray-200' : 'inline-block text-gray-500 no-underline hover:text-indigo-500 py-2 px-2'
-            
-        }
-            >
-            Spotlight
-          </NavLink>
-          </li>
-          <li>
-            <NavLink 
-            to="/blog"
-            className={({isActive}) => 
-                isActive ? 'inline-block py-2 px-2 text-white no-underline hover:text-gray-200' : 'inline-block text-gray-500 no-underline hover:text-indigo-500 py-2 px-2'
-            
-        }
-            >
-            Blog
-          </NavLink>
-          </li>
-          <li>
-           <NavLink 
-            to="/about"
-            className={({isActive}) => 
-                isActive ? 'inline-block py-2 px-2 text-white no-underline hover:text-gray-300' : 'inline-block text-gray-500 no-underline hover:text-indigo-500 py-2 px-2'
-            
-        }
-            >
-            About Me
-          </NavLink>
-          </li>
-        </ul>
-      </div>
+<footer className="bg-dbm-db-100">
+  <div className="container mx-auto py-8 px-4 flex flex-col md:flex-row items-center">
+      <div className="drop-shadow-2xl">
+              <img src="/dbm-logo.png" alt="logo" className="h-10 w-10"/>
+        </div>
+      <p>Home</p>
+      
     </div>
-  </div>
 </footer>
 
     )

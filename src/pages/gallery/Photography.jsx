@@ -51,7 +51,7 @@ const Photography = () => {
         <div className="container mx-auto">
           <div className="-m-1 flex flex-wrap md:-m-2">
             {currentImages.map((image, index) => (
-              <div key={index} className="flex flex-wrap w-1/2">
+              <div key={index} className="flex flex-wrap md:w-1/2">
                 <div className="w-full p-1 md:p-2">
                   <img
                     alt={`Gallery image ${index + 1}`}

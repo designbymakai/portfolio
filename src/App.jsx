@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import ScrollToTop from './components/ScrollTop';
-import { Nav, Banner, SmallNav, BannerAbout, BannerBlog } from "./components/Header";
+import { Nav, Banner, BannerAbout, BannerBlog } from "./components/Header";
 import { Author } from "./components/Footer";
 import { Footer } from "./components/Footer";
 
@@ -19,16 +19,13 @@ import AboutMe from './components/AboutMe';
 function Home() {
   
   return (
-    <div className= " bg-gray-200 dosis-font font-sans leading-normal tracking-normals">
+    <div className= " bg-gray-200 dosis-font font-sans leading-normal tracking-normal ">
       <Nav />
       <Banner />
-        
-           <Spotlight />
-          <CardPop />
-          <Skills />
-          <div className="container px-4 md:px-0 max-w-6xl mx-auto -mt-32 mt-10">
-        <Author />
-        </div>
+      <Spotlight />
+      <CardPop />
+      <Skills />
+      <About />
       <Footer />
     </div>
   )
@@ -39,7 +36,7 @@ function ShowPage() {
       <BannerBlog />
         <div className="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
           <div className="mx-0 sm:mx-6">
-          <SmallNav />
+          
           <Show />
           </div>
         </div>
@@ -54,7 +51,7 @@ function AboutPage() {
       <BannerAbout /> 
         <div className="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
           <div className="mx-0 sm:mx-6">
-          <SmallNav />
+     
           <About />
           </div>
         <Author />
@@ -69,13 +66,11 @@ function App() {
   return (
     <Router>
       <ScrollToTop>
-      <Routes>
-        
-        <Route index path="/" element={<Home />} />
-        <Route path="/showcase" element={<ShowPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        
-      </Routes>
+        <Routes>
+          <Route index path="/" element={<Home />} />
+          <Route path="/showcase" element={<ShowPage />} />
+          <Route path="/about" element={<AboutPage />} />
+        </Routes>
       </ScrollToTop>
     </Router>
     )

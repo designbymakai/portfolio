@@ -81,42 +81,23 @@ It took me a while to find my path, but I found I had a gift once I began nursin
                 <div className="container pt-3 pb-24">
                     <p className="text-xl font-bold block tracking-wide text-slate-700 uppercase">Get in touch</p>
                     <div className="flex md:flex-row flex-col">
-                            <div className="flex flex-col justify-center w-1/3">
-                            <div className="flex flex-row mx-auto">
-                                <FaMapMarkerAlt className="m-auto p-auto flex-none hover:scale-110"/>
-                                <p className="text-gray-900 font-light text-lg px-2 flex-none">Location:</p>
-                            </div>
-                                <p className=" text-indigo-500 font-light text-lg px-3 rounded-xl mx-auto bg-gray-300 hover:text-green-500">Auckland, New Zealand</p>
-                        </div>
                         
-                            <div className="flex flex-col justify-center w-1/3">
+                            <div className="flex flex-col justify-center w-1/2">
                                 <div className="flex flex-row mx-auto">
-                                    <FaPhoneAlt className="m-auto p-auto flex-none hover:scale-110" />
+                                    <FaPhoneAlt className="m-auto p-auto flex-none hover:scale-110 text-dbm-db-100" />
                                     <p className="text-gray-900 font-light text-lg px-2 flex-none">Phone:</p>
                                 </div>
-                                <p className="text-indigo-500 font-light text-lg px-3 rounded-xl mx-auto bg-gray-300 self-start hover:text-green-500">+64 021 467 456</p>
+                                <p className="text-indigo-500 font-light text-lg px-3 rounded-xl mx-auto bg-gray-300 self-start hover:text-green-500">+1 (206) 565-5267</p>
                             </div>
-                            <div className="flex flex-col justify-center w-1/3">
+                            <div className="flex flex-col justify-center w-1/2">
                                 <div className="flex flex-row mx-auto">
-                                    <FaPenAlt className="m-auto p-auto flex-none hover:scale-110" />
+                                    <FaPenAlt className="m-auto p-auto flex-none hover:scale-110 text-dbm-db-100" />
                                     <p className="text-gray-900 font-light text-lg capitalize px-3">Email:</p>
                                 </div>
                                 <p className="text-indigo-500 font-light text-lg px-3 rounded-xl mx-auto bg-gray-300 hover:text-green-500">makaizaneingalls@gmail.com</p>
                             </div>
 
                         
-                    </div>
-                    <div className='pt-6'>
-                    <MapContainer center={[-36.8485, 174.7633]} zoom={13} style={{ height: '400px', width: '100%' }}>
-                    <TileLayer
-                        url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
-                    />
-                    <Marker position={[-36.8485, 174.7633]} icon={customIcon}>
-                        <Popup>
-                        Auckland, New Zealand
-                        </Popup>
-                    </Marker>
-                    </MapContainer>
                     </div>
                 </div>
                 </Tab.Panel>

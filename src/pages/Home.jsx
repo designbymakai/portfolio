@@ -8,6 +8,7 @@ import Carousel from '../components/Carousel';
 
 export default function Spotlight() {
   const [isModalOpen1, setIsModalOpen1] = useState(false);
+  const [isCarouselModalOpen, setIsCarouselModalOpen] = useState(false);
   const [modalContent1, setModalContent1] = useState('');
 
   const openModal1 = (content) => {
@@ -18,6 +19,14 @@ export default function Spotlight() {
   const closeModal1 = () => {
     setIsModalOpen1(false);
     setModalContent1('');
+  };
+
+  const openCarouselModal = () => {
+    setIsCarouselModalOpen(true);
+  };
+
+  const closeCarouselModal = () => {
+    setIsCarouselModalOpen(false);
   };
 
   const images = [
@@ -31,7 +40,7 @@ export default function Spotlight() {
       <div id='spotlight' className='flex flex-col w-full items-center justify-center bg-dbm-db-300 pb-8'>
         {/* Posts Container */}
         <div className='flex flex-col w-full items-center justify-center pb-5'>
-          <div className='w-full border-y-8 border-dbm-gr-300 bg-dbm-w-100'>
+          <div className='w-full border-b-8 border-dbm-gr-300 bg-dbm-w-100'>
             <h1 className="font-extrabold tracking-wide m-auto text-center text-dbm-cr-200 uppercase pt-7">
               Showcase
             </h1>
@@ -66,7 +75,13 @@ export default function Spotlight() {
           </div>
           
         </div>
-        
+
+        <button
+          className="mt-4 bg-dbm-pr-200 hover:bg-dbm-pr-100 text-white px-4 py-2 rounded"
+          onClick={openCarouselModal}
+        >
+          Open Carousel
+        </button>
 
         {/* Modal 1 */}
         {isModalOpen1 && (
@@ -168,8 +183,22 @@ export default function Spotlight() {
             </div>
           </div>
         )}
+
+        {/* Carousel Modal */}
+        {isCarouselModalOpen && (
+          <div className="fixed inset-0 bg-opacity-50 flex items-center justify-center z-40">
+            <div className="bg-dbm-db-100 bg-opacity-55 shadow-lg w-full h-full overflow-hidden md:p-20 p-6 md:pt-5 pt-10">
+              <Carousel images={images} />
+              <button
+                onClick={closeCarouselModal}
+                className="mt-4 bg-dbm-pr-200 hover:bg-dbm-pr-100 text-white px-4 py-2 rounded z-50 absolute"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        )}
       </div>
-      <Carousel images={images}/>
     </>
   );
 }

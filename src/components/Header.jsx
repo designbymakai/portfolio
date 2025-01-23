@@ -107,7 +107,7 @@ export function Nav() {
   }, []);
 
   return (
-    <nav className={`${isSticky ? 'fixed top-0 inset-x-0 bg-gray-900' : 'absolute top-0 inset-x-0'} z-50 transition-all duration-700 ease-in-out`}>
+    <nav className={`${isSticky ? 'fixed top-0 inset-x-0 bg-gray-900' : 'absolute top-0 inset-x-0'} z-40 transition-all duration-700 ease-in-out`}>
       <div className={`${isSticky ? 'max-w-full px-4 justify-center' : 'container justify-start'} mx-auto flex items-center h-14 transition-all duration-700 ease-in-out`}>
         <div className="flex items-center drop-shadow-2xl">
           <img src="/dbm-logo.png" alt="logo" className="h-10 w-10"/>

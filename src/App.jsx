@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import ScrollToTop from './components/ScrollTop';
 import { Nav, Banner, BannerAbout, BannerBlog } from "./components/Header";
-import { Author } from "./components/Footer";
 import { Footer } from "./components/Footer";
 
 import Spotlight from "./pages/Home";
@@ -54,7 +53,6 @@ function AboutPage() {
      
           <About />
           </div>
-        <Author />
         </div>
       <Footer />
     </div>

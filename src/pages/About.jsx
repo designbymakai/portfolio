@@ -1,5 +1,3 @@
-import Tippy from '@tippyjs/react';
-import { useEffect, useState, useRef } from 'react';
 import 'tippy.js/dist/tippy.css'; // optional
 import { Tab } from '@headlessui/react'
 import { FaMapMarkerAlt, FaPhoneAlt, FaPenAlt, FaUser, FaTools, FaBook } from 'react-icons/fa';
@@ -64,7 +62,7 @@ return (
                             My Story
                             </h1>
                             <p className="text-xl text-dbm-db-300 pb-8 w-11/12 m-auto">
-                            I'm a Kiwi-born and American-raised 22-year-old student at University of Auckland. I grew up with my parents in Washington State in a tiny town called Bainbridge Island. My parents are lifelong sailors, and I grew up living on a sailboat with them. Continuing with the nautical theme, I was a swimmer my whole childhood, a sport that gave me a lot of time to daydream and think. After finishing high school in the US, I moved to NZ by myself. <br /> <br />
+                            I'm a Kiwi-born and American-raised 23-year-old recent graduate from University of Auckland. I grew up with my parents in Washington State in a tiny town called Bainbridge Island. My parents are lifelong sailors, and I grew up living on a sailboat with them. Continuing with the nautical theme, I was a swimmer my whole childhood, a sport that gave me a lot of time to daydream and think. After finishing high school in the US, I moved to NZ by myself. <br /> <br />
 
 I started Uni with a degree in Computer Science as I have had a lifelong love of computers. Unfortunately, my passion didn't transfer over to the programme, and when the pandemic came, it was too much for me, and I dropped the degree. I spent time working in different industries and learning about myself and found out that my whole life, I had been living with undiagnosed ADHD. It took me a while to come to terms with what that meant, but after that, I felt proud of getting so far without knowing. <br /> <br />
 

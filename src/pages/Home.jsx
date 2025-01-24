@@ -80,7 +80,7 @@ export default function Spotlight() {
           className="mt-4 bg-dbm-pr-200 hover:bg-dbm-pr-100 text-white px-4 py-2 rounded"
           onClick={openCarouselModal}
         >
-          Open Carousel
+          View Highlights
         </button>
 
         {/* Modal 1 */}

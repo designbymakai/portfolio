@@ -30,9 +30,9 @@ export default function Spotlight() {
   };
 
   const images = [
-    "src/assets/hero/hero2.png",
-    "src/assets/hero/hero3.png",
-    "src/assets/hero/hero4.png",
+    "/hero2.png",
+    "/hero3.png",
+    "/hero4.png",
   ];
 
   return (
@@ -60,7 +60,7 @@ export default function Spotlight() {
                 className="flex flex-wrap no-underline hover:no-underline cursor-pointer"
               >
                 <img
-                  src="src/assets/hero/butterfly-hero.png"
+                  src="/butterfly-hero.png"
                   className="h-full w-full pb-6"
                 />
                 <p className="w-full text-gray-600 text-xs md:text-sm px-6 uppercase">creating a comprehensive productivity app</p>

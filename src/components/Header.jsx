@@ -22,36 +22,36 @@ export function Banner() {
   }, []);
   return (
     <div id="home" className="w-full m-0 p-0 h-screen overflow-hidden border-b-8 border-dbm-gr-300 bg-dbm-db-100 flex">
-    <div className="w-full md:w-1/2 bg-dbm-db-100 flex flex-col justify-center px-4 mx-0 md:mx-12 md:px-0">
-      <div className="container max-w-4xl mx-auto text-left break-normal">
-        <div className="scrolling-text-container">
+    <div className="w-full md:w-1/2 bg-dbm-db-100 flex flex-col justify-center mx-0 md:mr-10 md:ml-6 md:pl-0 overflow-none">
+      <div className="container max-w-4xl mx-auto text-left break-normal overflow-none">
+        <div className="scrolling-text-container overflow-none">
           <p className="text-lg md:text-[1.8rem]">
             Hello, I'm <span className='text-dbm-lb-200 head-span text-xl md:text-[2rem]'>Makai</span>
           </p>
-          <p className="text-base md:text-[1.6rem] mb-4">
+          <p className="text-base md:text-[1.6rem] mb-4 text-wrap">
             Innovative Designer Crafting Solutions That Inspire and Perform
           </p>
-          <p className="scrolling-text text-sm md:text-base mb-3">
+          <p className="scrolling-text text-sm md:text-base mb-3 text-wrap">
             <span className='head-span'>Versatile</span> and <span className='head-span'>passionate</span> designer, specializing in <span className='head-span'>Innovative</span> solutions that merge <span className='head-span'>creativity </span> with <span className='head-span'>functionality</span>. 
           </p>
          
-          <p className="scrolling-text text-sm md:text-base mb-3">
+          <p className="scrolling-text text-sm md:text-base mb-3 text-wrap">
             <span className='head-span'>Multidisciplinary</span> skill set spanning UX/UI, graphic design, web design, 3D modeling, and brand development
           </p>
-          <p className="scrolling-text text-sm md:text-base mb-3">
+          <p className="scrolling-text text-sm md:text-base mb-3 text-wrap">
             Design practice based in <span className='head-span'>human-centered design</span> principles, honed through <span className='head-span'>real-world projects</span>
           </p>
-          <p className="scrolling-text text-sm md:text-base mb-3">
+          <p className="scrolling-text text-sm md:text-base mb-3 text-wrap">
             Eager to participate on projects that <span className='head-span'>push boundaries</span> and create <span className='head-span'>meaningful impact</span>
           </p>
-          <p className="scrolling-text text-sm md:text-base mb-3">
+          <p className="scrolling-text text-sm md:text-base mb-3 text-wrap">
             With a <span className='head-span'>global perspective</span> as an <span className='head-span'>American-Kiwi dual citizen</span>
           </p>
           </div>
         </div>
       </div>
       <div
-        className="md:w-4/12 sm:w-1/4 bg-cover bg-center relative top-0 h-screen right-10"
+        className="md:w-4/12 bg-cover bg-center relative top-0 h-screen right-10"
         style={{ backgroundImage: 'url("/portrait.jpeg")' }}
       >
         <div className="md:w-1/12 bg-dbm-db-100"></div>

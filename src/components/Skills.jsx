@@ -82,7 +82,15 @@ const Skills = () => {
           {activeContent === 'default' && (
             <div className="min-h-[calc(100vh-8rem)]">
               <p className="text-xl font-bold pt-2 text-dbm-pr-100">Welcome to the Gallery</p>
-              <p className="text-lg text-dbm-w-200">Select a category to view the content.</p>
+              <p className="text-lg text-dbm-w-200">Click on the arrows to view other content.</p>
+              <hr className="border-dbm-w-200 my-4" />
+              <p className="text-3xl text-dbm-w-200 pb-3">Recent Freelance Work</p>
+              <p className="text-lg text-dbm-w-200 pb-4">Built website for client Relax Medical Aesthetics, unlike this portfolio which I coded using React.js, this website was built using Squarespace. View it at <a href='https://www.relaxmedicalaesthetics.com' className='text-dbm-pr-200 hover:text-dbm-pr-100'>here</a>.</p>
+
+              <img 
+              src='/relax-capture.png'
+              className='w-3/4 m-auto cursor-pointer'
+              />
             </div>
           )}
           {activeContent === 'video' && (

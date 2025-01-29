@@ -22,7 +22,7 @@ return (
     <div className="w-full flex justify-center">
         <div className="flex justify-center md:pt-0 pt-20">
             <img    
-            src="https://i.ibb.co/cQ95fK9/profile.png"
+            src="./portrait2.png"
             className="shadow-xl rounded-full align-middle border-2 border-gray-300 absolute max-w-[150px] hover:scale-110 -m-16"
         />
         </div>

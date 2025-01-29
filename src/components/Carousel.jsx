@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './styles.css'; // Import the CSS file
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 const Carousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -57,16 +58,16 @@ const Carousel = ({ images }) => {
         ))}
       </div>
       <button
-        className="absolute top-1/2 left-5 transform -translate-y-1/2 bg-gray-800 text-white p-2"
+        className="absolute md:top-1/2 bottom-0 left-5 transform -translate-y-1/2 md:bg-none bg-dbm-db-200 text-white p-2"
         onClick={prevSlide}
       >
-        Prev
+        <FaArrowLeft />
       </button>
       <button
-        className="absolute top-1/2 right-5 transform -translate-y-1/2 bg-gray-800 text-white p-2"
+        className="absolute md:top-1/2 bottom-0 right-5 transform -translate-y-1/2 md:bg-none bg-dbm-db-200 text-white p-2"
         onClick={nextSlide}
       >
-        Next
+        <FaArrowRight />
       </button>
     </div>
   );

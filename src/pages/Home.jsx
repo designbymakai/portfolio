@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import Carousel from '../components/Carousel';
+import { FaDatabase, FaDraftingCompass, FaHeart, FaPencilRuler, FaSearch, FaSitemap, FaSmileBeam, FaTimes, FaUpload, FaUserFriends } from 'react-icons/fa';
 
 export default function Spotlight() {
   const [isModalOpen1, setIsModalOpen1] = useState(false);
@@ -76,128 +77,164 @@ export default function Spotlight() {
           
         </div>
 
-        <button
-          className="mt-4 bg-dbm-pr-200 hover:bg-dbm-pr-100 text-white px-4 py-2 rounded"
-          onClick={openCarouselModal}
-        >
-          View Highlights
-        </button>
+      
 
         {/* Modal 1 */}
         {isModalOpen1 && (
           <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center z-50">
-            <div className="bg-dbm-w-100 p-6 shadow-lg md:w-2/3 w-full h-full rounded-3x md:h-5/6 overflow-y-scroll overflow-x-hidden rounded-3xl md:pt-5 pt-10">
+            <div className="bg-dbm-db-200 p-6 shadow-lg md:h-[90vh] w-full h-full overflow-y-scroll overflow-x-hidden md:pt-5 pt-10">
               <h2 className="text-3xl font-bold text-dbm-lb-300 ">Butterfly Productivity</h2>
-              <p className=' text-dbm-db-400 text-xl md:text-md py-2 uppercase'>
+              <p className=' text-dbm-w-400 text-xl md:text-md py-2 uppercase'>
                 <a href='https://redesign.ac.nz/projects/butterfly-productivity'>
                   <FontAwesomeIcon icon={faExternalLinkAlt} className="mx-2" />  University Website Showcase 
                 </a>
               </p>
-              <p className=' text-dbm-db-100 text-xl pb-6'>
+              <p className=' text-dbm-w-100 text-xl pb-6'>
                 As my final-year design project I created Butterfly, an AI-powered productivity app created to address the challenges adults with ADHD face in managing tasks and maintaining focus in the workplace. 
               </p>
-              <p className=' text-dbm-db-100 text-xl pb-6'>
+              <p className=' text-dbm-w-100 text-xl pb-6'>
                 I combined user-centered research, thoughtful design principles, and a genuine empathy for neurodivergent experiences to craft a solution that breaks down overwhelming tasks, reduces distractions, and improves overall workflow.
               </p>
-              <p className='text-dbm-lb-300 text-2xl font-bold pb-3'>
+
+
+              <div className="bg-dbm-db-100 bg-opacity-55 shadow-lg w-full h-[90vh] overflow-hidden border-y-4 border-dbm-w-200">
+                <Carousel images={images} />
+              </div>
+
+
+              <p className='text-dbm-lb-300 text-2xl font-bold py-3'>
                 Process
               </p>
-              <div className='flex md:flex-row flex-col items-stretch'>
-                <ul className='flex flex-col bg-dbm-lb-400 m-2 rounded-3xl md:w-1/3'>
-                  <p className=' text-dbm-lb-100 text-xl p-2 text-justify mx-auto'>	
-                    Research & User Insights
-                  </p>
-                  <li className='text-dbm-w-200 text-lg pb-2 list-disc ml-11'>Explored ADHD-related needs through empathy maps and user scenarios.</li>
-                  <li className='text-dbm-w-200 text-lg pb-3 list-disc ml-11'>Discovered key pain points like task overload and executive dysfunction.</li>
-                </ul>
-                <ul className='flex flex-col bg-dbm-lb-400 m-2 rounded-3xl md:w-1/3'>
-                  <p className=' text-dbm-lb-100 text-xl p-2 text-justify mx-auto'>	
-                    Design & Prototyping
-                  </p>
-                  <li className='text-dbm-w-200 text-lg pb-2 list-disc ml-11'>Created low-fidelity wireframes to refine workflows and visuals.</li>
-                  <li className='text-dbm-w-200 text-lg pb-3 list-disc ml-11'>Focused on accessible design, using clear icons and minimal clutter.</li>
-                </ul>
-                <ul className='flex flex-col bg-dbm-lb-400 m-2 rounded-3xl md:w-1/3'>
-                  <p className=' text-dbm-lb-100 text-xl p-2 text-justify mx-auto'>	
-                    AI Integration
-                  </p>
-                  <li className='text-dbm-w-200 text-lg pb-2 pr-2 list-disc ml-11'>Introduced an assistant to help prioritize tasks and automate routine steps.</li>
-                  <li className='text-dbm-w-200 text-lg pb-3 pr-2 list-disc ml-11'>Balanced advanced features with an intuitive interface, avoiding overwhelm.</li>
-                </ul>
-              </div>
-              <p className='text-dbm-lb-300 text-2xl font-bold pb-3'>
+
+              <div className='flex md:flex-row flex-col'> 
+                <div className='bg-dbm-lb-300 m-2 rounded-3xl md:w-1/3 flex'> 
+                    <div className='m-2 rounded-3xl mx-10'>
+                      <div className='flex flex-row items-center justify-center'>
+                        <FaSearch className='text-3xl text-dbm-db-300 pr-3' />
+                        <p className='text-dbm-w-100 text-xl font-bold'>Research & User Insights</p>
+                      </div>
+                      <p className='text-dbm-w-200 text-lg pb-2'>Explored ADHD-related needs through empathy maps and user scenarios.</p>
+                      <p className='text-dbm-w-200 text-lg pb-2'>Discovered key pain points like task overload and executive dysfunction.</p>
+                    </div>
+                  </div>
+
+                  <div className='bg-dbm-lb-300 m-2 rounded-3xl md:w-1/3 flex'> 
+                    <div className='m-2 rounded-3xl mx-10'>
+                      <div className='flex flex-row items-center justify-center'>
+                        <FaDraftingCompass className='text-3xl text-dbm-db-300 pr-3' />
+                        <p className='text-dbm-w-100 text-xl font-bold'>Design & Prototyping</p>
+                      </div>
+                      <p className='text-dbm-w-200 text-lg pb-2'>Created low-fidelity wireframes to refine workflows and visuals.</p>
+                      <p className='text-dbm-w-200 text-lg pb-2'>Focused on accessible design, using clear icons and minimal clutter.</p>
+                    </div>
+                  </div>
+
+                  <div className='bg-dbm-lb-300 m-2 rounded-3xl md:w-1/3 flex'> 
+                    <div className='m-2 rounded-3xl mx-10'>
+                      <div className='flex flex-row items-center justify-center'>
+                        <FaDatabase className='text-3xl text-dbm-db-300 pr-3' />
+                        <p className='text-dbm-w-100 text-xl font-bold'>AI Integration</p>
+                      </div>
+                      <p className='text-dbm-w-200 text-lg pb-2'>Introduced an assistant to help prioritize tasks and automate routine steps.</p>
+                      <p className='text-dbm-w-200 text-lg pb-2'>Balanced advanced features with an intuitive interface, avoiding overwhelm.</p>
+                    </div>
+                  </div>
+                </div>
+
+                
+
+
+
+              
+              <p className='text-dbm-lb-300 text-2xl font-bold py-3'>
                 Skills Demonstrated
               </p>
-              <div className='flex md:flex-row flex-col items-stretch'>
-                <ul className='flex flex-col bg-dbm-lb-400 m-2 rounded-3xl md:w-1/3'>
-                  <p className=' text-dbm-lb-100 text-xl p-2 text-justify mx-auto'>	
-                    Empathetic Design
-                  </p>
-                  <li className='text-dbm-w-200 text-lg pb-2 list-disc ml-11'>Translated user feedback into tangible interface improvements.</li>
-                  <li className='text-dbm-w-200 text-lg pb-3 list-disc ml-11'>Maintained a neurodivergent-friendly approach throughout.</li>
-                </ul>
-                <ul className='flex flex-col bg-dbm-lb-400 m-2 rounded-3xl md:w-1/3'>
-                  <p className=' text-dbm-lb-100 text-xl p-2 text-justify mx-auto'>	
-                    Iterative Prototyping
-                  </p>
-                  <li className='text-dbm-w-200 text-lg pb-2 list-disc ml-11'>Gathered peer feedback and refined features in multiple design loops.</li>
-                  <li className='text-dbm-w-200 text-lg pb-3 list-disc ml-11'>Ensured each iteration solved real user challenges.</li>
-                </ul>
-                <ul className='flex flex-col bg-dbm-lb-400 m-2 rounded-3xl md:w-1/3'>
-                  <p className=' text-dbm-lb-100 text-xl p-2 text-justify mx-auto'>	
-                    Technical Know-How
-                  </p>
-                  <li className='text-dbm-w-200 text-lg pb-2 list-disc ml-11'>Coded the project from scratch, combining React, Electron, and AI elements for a cohesive system.</li>
-                  <li className='text-dbm-w-200 text-lg pb-3 list-disc ml-11'>Handled cross-platform usability alongside straightforward user flows.</li>
-                </ul>
-              </div>
-              <p className='text-dbm-lb-300 text-2xl font-bold pb-3'>
+
+              <div className='flex md:flex-row flex-col'> 
+                <div className='bg-dbm-lb-300 m-2 rounded-3xl md:w-1/3 flex'> 
+                    <div className='m-2 rounded-3xl mx-10'>
+                      <div className='flex flex-row items-center justify-center'>
+                        <FaHeart className='text-3xl text-dbm-db-300 pr-3' />
+                        <p className='text-dbm-w-100 text-xl font-bold'>Empathetic Design</p>
+                      </div>
+                      <p className='text-dbm-w-200 text-lg pb-2'>Translated user feedback into tangible interface improvements.</p>
+                      <p className='text-dbm-w-200 text-lg pb-2'>Maintained a neurodivergent-friendly approach throughout.</p>
+                    </div>
+                  </div>
+
+                  <div className='bg-dbm-lb-300 m-2 rounded-3xl md:w-1/3 flex'> 
+                    <div className='m-2 rounded-3xl mx-10'>
+                      <div className='flex flex-row items-center justify-center'>
+                        <FaPencilRuler className='text-3xl text-dbm-db-300 pr-3' />
+                        <p className='text-dbm-w-100 text-xl font-bold'>Iterative Prototyping</p>
+                      </div>
+                      <p className='text-dbm-w-200 text-lg pb-2'>Gathered peer feedback and refined features in multiple design loops.</p>
+                      <p className='text-dbm-w-200 text-lg pb-2'>Ensured each iteration solved real user challenges.</p>
+                    </div>
+                  </div>
+
+                  <div className='bg-dbm-lb-300 m-2 rounded-3xl md:w-1/3 flex'> 
+                    <div className='m-2 rounded-3xl mx-10'>
+                      <div className='flex flex-row items-center justify-center'>
+                        <FaSitemap className='text-3xl text-dbm-db-300 pr-3' />
+                        <p className='text-dbm-w-100 text-xl font-bold'>Technical Know-How</p>
+                      </div>
+                      <p className='text-dbm-w-200 text-lg pb-2'>Coded the project from scratch, combining React, Electron, and AI elements for a cohesive system.</p>
+                      <p className='text-dbm-w-200 text-lg pb-2'>Handled cross-platform usability alongside straightforward user flows.</p>
+                    </div>
+                  </div>
+                </div>
+
+
+              <p className='text-dbm-lb-300 text-2xl font-bold py-3'>
                 Outcomes & Learnings
               </p>
-              <div className='flex md:flex-row flex-col items-stretch'>
-                <ul className='flex flex-col bg-dbm-lb-400 m-2 rounded-3xl md:w-1/3'>
-                  <p className=' text-dbm-lb-100 text-xl py-1 text-justify mx-auto top-0'>	
-                    Addresses Genuine Need:
-                  </p>
-                  <p className='text-dbm-w-200 text-lg pb-3 px-4 ml-7'>Focused on real ADHD concerns, from executive dysfunction to stress reduction</p>
-                </ul>
-                <ul className='flex flex-col bg-dbm-lb-400 m-2 rounded-3xl md:w-1/3'>
-                  <p className=' text-dbm-lb-100 text-xl py-1 text-justify mx-auto top-0 '>	
-                    Tech + Simplicity:
-                  </p>
-                  <p className='text-dbm-w-200 text-lg pb-3 px-4 ml-7 align-text-top'>Showed how AI can augment rather than complicate user experiences</p>
-                </ul>
-                <ul className='flex flex-col bg-dbm-lb-400 m-2 rounded-3xl md:w-1/3 align-top'>
-                  <p className=' text-dbm-lb-100 text-xl py-1 text-justify mx-auto top-0'>	
-                    Holistic Approach:
-                  </p>
-                  <p className='text-dbm-w-200 text-lg pb-3 px-4 ml-7 align-text-top'>Highlighted the importance of empathy, accessibility, and iteration in creating impactful tools</p>
-                </ul>
-              </div>
+
+
+              <div className='flex md:flex-row flex-col pb-10'> 
+                <div className='bg-dbm-lb-300 m-2 rounded-3xl md:w-1/3 flex'> 
+                    <div className='m-2 rounded-3xl mx-10'>
+                      <div className='flex flex-row items-center justify-center'>
+                        <FaSmileBeam className='text-3xl text-dbm-db-300 pr-3' />
+                        <p className='text-dbm-w-100 text-xl font-bold'>Addresses Genuine Need</p>
+                      </div>
+                      <p className='text-dbm-w-200 text-lg pb-2'>Focused on real ADHD concerns, from executive dysfunction to stress reduction.</p>
+                    </div>
+                  </div>
+
+                  <div className='bg-dbm-lb-300 m-2 rounded-3xl md:w-1/3 flex'> 
+                    <div className='m-2 rounded-3xl mx-10'>
+                      <div className='flex flex-row items-center justify-center'>
+                        <FaUpload className='text-3xl text-dbm-db-300 pr-3' />
+                        <p className='text-dbm-w-100 text-xl font-bold'>Tech + Simplicity</p>
+                      </div>
+                      <p className='text-dbm-w-200 text-lg pb-2'>Showed how AI can augment rather than complicate user experiences.</p>
+                    </div>
+                  </div>
+
+                  <div className='bg-dbm-lb-300 m-2 rounded-3xl md:w-1/3 flex'> 
+                    <div className='m-2 rounded-3xl mx-10'>
+                      <div className='flex flex-row items-center justify-center'>
+                        <FaUserFriends className='text-3xl text-dbm-db-300 pr-3' />
+                        <p className='text-dbm-w-100 text-xl font-bold'>Hollistic Approach</p>
+                      </div>
+                      <p className='text-dbm-w-200 text-lg pb-2'>Highlighted the importance of empathy, accessibility, and iteration in creating impactful tools</p>
+                    </div>
+                  </div>
+                </div>
+
+
               <button
                 onClick={closeModal1}
-                className="mt-4 bg-dbm-pr-200 hover:bg-dbm-pr-100 text-white px-4 py-2 rounded"
+                className="mt-4 bg-dbm-pr-200 hover:bg-dbm-pr-100 text-white rounded absolute md:top-12 top-0 right-4 p-2"
               >
-                Close
+                <FaTimes className='text-2xl text-dbm-w-200' />
               </button>
             </div>
           </div>
         )}
 
-        {/* Carousel Modal */}
-        {isCarouselModalOpen && (
-          <div className="fixed inset-0 bg-opacity-50 flex items-center justify-center z-40">
-            <div className="bg-dbm-db-100 bg-opacity-55 shadow-lg w-full h-full overflow-hidden md:p-20 p-6 md:pt-5 pt-10">
-              <Carousel images={images} />
-              <button
-                onClick={closeCarouselModal}
-                className="mt-4 bg-dbm-pr-200 hover:bg-dbm-pr-100 text-white px-4 py-2 rounded z-50 absolute"
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        )}
+        
       </div>
     </>
   );

@@ -59,8 +59,8 @@ const Skills = () => {
   };
 
   return (
-    <div ref={mainRef} className="w-full text-center bg-dbm-db-200 pt-16 min-h-screen" id='skills'>
-      <div className="flex justify-center flex-col lg:pt-4 pt-8 pb-0">
+    <div ref={mainRef} className="w-full text-center bg-dbm-db-200 min-h-screen" id='skills'>
+      <div className="flex justify-center flex-col pb-0">
         <div className="flex justify-center items-center bg-dbm-db-100">
           <button onClick={handlePrev} className="p-2 bg-dbm-db-100 rounded-l-lg">
           <FaArrowLeft className='text-2xl text-dbm-pr-100' />

@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Routes, Route, Link, NavLink } from 'react-rou
 
 export function CardPop() {
     return(
-<section className='w-full bg-dbm-db-100 border-y-8 border-dbm-gr-300' id='cardpop'>
+<section className='w-full bg-dbm-db-300 border-y-8 border-dbm-gr-300 pt-8' id='cardpop'>
         <h1 className='text-center font-extrabold bg-gradient-to-r from-dbm-lb-100 via-dbm-cr-100 to-dbm-pr-100 bg-clip-text text-transparent uppercase'>My Design Philosophy</h1>
-        <div className="flex flex-wrap justify-center bg-dbm-db-100 w-3/4 md:w-4/5 m-auto">
+        <div className="flex flex-wrap justify-center bg-dbm-db-300 w-3/4 md:w-4/5 m-auto">
   
   {/* card 1 */}
         

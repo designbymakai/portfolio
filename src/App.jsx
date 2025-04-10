@@ -13,6 +13,7 @@ import About from "./pages/About";
 import { CardPop } from './components/CardPops';
 import Skills from './components/Skills';
 import AboutMe from './components/AboutMe';
+import Exhibit from './components/Exhibit';
 
 
 function Home() {
@@ -22,6 +23,7 @@ function Home() {
       <Nav />
       <Banner />
       <Spotlight />
+      
       <CardPop />
       <Skills />
       <About />

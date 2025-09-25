@@ -4,7 +4,7 @@ import 'tippy.js/dist/tippy.css';
 import { BrowserRouter } from 'react-router-dom';
 import './styles.css';
 import { Link } from 'react-scroll';
-
+import Portrait from '@/assets/portraits/portrait.jpeg';
 
 export function Banner() {
   useEffect(() => {
@@ -52,7 +52,7 @@ export function Banner() {
       </div>
       <div
         className="md:w-4/12 bg-cover bg-center relative top-0 h-screen right-10"
-        style={{ backgroundImage: 'url("src/assets/portraits/portrait.jpeg")' }}
+        style={{ backgroundImage: `url(${Portrait})` }}
       >
         <div className="md:w-1/12 bg-dbm-db-100"></div>
       </div>

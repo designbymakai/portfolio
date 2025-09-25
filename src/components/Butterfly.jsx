@@ -1,14 +1,20 @@
 import React from "react";
 import FeatureTimeline from "./FeatureTimeline";
 import { FaGithub, FaLink } from "react-icons/fa";
-
+import butterflyHome from "@/assets/butterfly/features/butterfly-home.png";
+import butterflyAI from "@/assets/butterfly/features/ai-assistant.png";
+import butterflyCalendar from "@/assets/butterfly/features/calendar.png";
+import butterflyTasks from "@/assets/butterfly/features/tasks.png";
+import butterflyProjects from "@/assets/butterfly/features/projects.png";
+import butterflyProjectsNote from "@/assets/butterfly/features/projectsnote.png";
+import butterflyMachero from "@/assets/butterfly/butterfly-machero.png";
 
 export default function Butterfly() {
   const features = [
   { 
       title: "Smart Dashboard",
       text: "The Butterfly homepage offers a clear and concise overview of your day, allowing you to hit the ground running. It displays a thumbnail of your calendar events, a daily agenda highlighting tasks and events, and a summary of active tasks, including those due that day.",
-      img: "src/assets/butterfly/features/butterfly-home.png",
+      img: butterflyHome,
       features: [
         "Overview of your day",
         "Thumbnail of calendar events",
@@ -19,7 +25,7 @@ export default function Butterfly() {
     {
       title: "AI Assistant",
       text: "The AI Assistant takes center stage on this page, offering quick interactions to add, update, or prioritize tasks. You can also check upcoming tasks and get advice on what to focus on. The homepage is designed to give you all the essential information at a glance, helping you kickstart your day efficiently.",
-        img: "src/assets/butterfly/features/ai-assistant.png",
+        img: butterflyAI,
         features: [
           "Quick interactions to manage tasks",
           "Check upcoming tasks",
@@ -29,7 +35,7 @@ export default function Butterfly() {
   {
     title: "Calendar Integration",
     text: "Drag and drop events, color-coded for clarity.",
-    img: "src/assets/butterfly/features/calendar.png",
+    img: butterflyCalendar,
     features: [
           "Drag and drop events and tasks",
           "Color-coded for clarity",
@@ -39,7 +45,7 @@ export default function Butterfly() {
   {
     title: "Task Management",
     text: "All of your tasks in one place for easy management.",
-    img: "src/assets/butterfly/features/tasks.png",
+    img: butterflyTasks,
     features: [
       "Create, edit, and delete tasks",
       "Set due dates and reminders",
@@ -49,7 +55,7 @@ export default function Butterfly() {
   {
     title: "Project Overviews",
         text: "Get a high-level view of your projects and their progress.",
-        img: "src/assets/butterfly/features/projects.png",
+        img: butterflyProjects,
         features: [
           "Visualize project timelines",
           "Track milestones and deadlines",
@@ -59,7 +65,7 @@ export default function Butterfly() {
   {
     title: "Project Notes",
         text: "Create notes and link them to projects for easy reference.",
-        img: "src/assets/butterfly/features/projectsnote.png",
+        img: butterflyProjectsNote,
         features: [
           "Rich text formatting",
           "Link notes to tasks and projects",
@@ -116,7 +122,7 @@ export default function Butterfly() {
         {/* Right: Centered and Scaled Screenshot */}
         <div className="w-full md:w-1/2 flex items-center justify-center">
           <img
-            src="src/assets/butterfly/butterfly-machero.png"
+            src={butterflyMachero}
             alt="Butterfly App Screenshot in MacBook Mockup"
             className="rounded-xl w-full h-auto max-w-[900px] md:max-w-[1100px] mx-auto object-contain"
           />

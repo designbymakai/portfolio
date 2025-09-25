@@ -6,6 +6,26 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { ExternalLink, Layers } from "lucide-react";
+import butterflyHero from '@/assets/butterfly/butterfly-hero.png';
+import butterflyResearch from '@/assets/showcase/ux/researchPropCover.jpg';
+import butterflyCapstone from '@/assets/butterfly/capstone-cover.jpg';
+import butterflyPresentation from '@/assets/butterfly/butterfly-pres.png';
+import hourglassThumbnail from '@/assets/showcase/thumbnails/hourglass-thumbnail.png';
+import hourglassPresentation from '@/assets/showcase/thumbnails/hourglass-pres.png';
+import hourglassDocumentation from '@/assets/showcase/ux/hourglass.png';
+import relaxCapture from '@/assets/showcase/ux/relax-capture.png';
+import ripeThumbnail from '@/assets/showcase/thumbnails/ripe.png';
+import systemsnetThumbnail from '@/assets/showcase/ux/systemsnet.png';
+import netatWorkThumbnail from '@/assets/showcase/ux/whitepaperCover.jpg';
+import illuvisonThumbnail from '@/assets/showcase/thumbnails/illuvion-thumbnail.png'; 
+import illuvisonDocumentation from '@/assets/showcase/ux/illuvison-doc.png'; 
+import floodCheckThumbnail from '@/assets/showcase/thumbnails/floodcheck-thumbnail.png'; 
+import floodCheckCover from '@/assets/showcase/ux/floodCheckCover.jpg'; 
+import jymbotThumbnail from '@/assets/showcase/thumbnails/jymbot-thumbnail.png'; 
+import jymbotThumbnail2 from '@/assets/showcase/thumbnails/jymbot-thumbnail2.png';
+import moss3Thumbnail from '@/assets/showcase/ux/moss3.png';
+import moss3InfoThumbnail from '@/assets/showcase/ux/moss3-info.png';
+
 
 // Combine all projects into one category
 const allProjects = [
@@ -17,7 +37,7 @@ const allProjects = [
     role: "Butterfly · UI/UX · Dev",
     featured: true,
     blurb: "Butterfly is a productivity dashboard designed for clarity and focus. Organize tasks, track your week, and manage your calendar—all in one place.",
-    cover: "src/assets/butterfly/butterfly-hero.png",
+    cover: butterflyHero,
     alt: "Butterfly app dashboard",
     tags: ["App Design", "UI/UX", "React"],
     links: [
@@ -30,7 +50,7 @@ const allProjects = [
     role: "Butterfly · Researcher",
     featured: false,
     blurb: "Comprehensive research proposal providing data on pain points and market opportunities.",
-    cover: "src/assets/showcase/ux/researchPropCover.jpg",
+    cover: butterflyResearch,
     alt: "Digital character illustration",
     tags: ["Editorial Design", "Adobe Illustrator", "Design Research"],
     links: [{ label: "View PDF", href: "https://drive.google.com/file/d/1RvZkL-dD_Dg_25okltwl3S7A-gLCmkFU/preview?usp=embed_googleplus" }],
@@ -41,7 +61,7 @@ const allProjects = [
     role: "Butterfly · UI/UX",
     featured: false,
     blurb: "Comprehensive visual summary providing insights on user experience and design impact.",
-    cover: "src/assets/butterfly/capstone-cover.jpg",
+    cover: butterflyCapstone,
     alt: "Digital character illustration",
     tags: ["Editorial Design", "Adobe Illustrator", "UI/UX"],
     links: [{ label: "View PDF", href: "https://drive.google.com/file/d/1vyg0IgxEdlJp1xuwhThMEB3xhHx31aBZ/preview?usp=embed_googleplus" }],
@@ -52,7 +72,7 @@ const allProjects = [
     role: "Butterfly · UI/UX",
     featured: false,
     blurb: "Comprehensive visual summary providing insights on user experience and design impact.",
-    cover: "src/assets/butterfly/butterfly-pres.png",
+    cover: butterflyPresentation,
     alt: "Digital character illustration",
     tags: ["Editorial Design", "Presentation"],
     links: [{ label: "View PDF", href: "https://drive.google.com/file/d/1ce4vp14moKcDBY6Mp1lY-IDRd1JVDmSU/preview?usp=embed_googleplus" }],
@@ -63,7 +83,7 @@ const allProjects = [
     role: "UI/UX · Dev",
     featured: true,
     blurb: "A recycling app that helps users recycle more effectively and gamifies the experience allowing for them to earn rewards.",
-    cover: "src/assets/showcase/thumbnails/hourglass-thumbnail.png",
+    cover: hourglassThumbnail,
     alt: "Hourglass app dashboard",
     tags: ["App Design", "Figma", "UI/UX"],
     links: [{ label: "Live Demo", href: "https://www.figma.com/proto/JOkThCJMBslgNakh9TuZt3/DES200-A2-Draft_1?embed_host=share&kind=proto&node-id=123-138&scaling=scale-down&starting-point-node-id=0%3A3&t=Obfuj4jIp8km9rY3-1" },
@@ -75,7 +95,7 @@ const allProjects = [
     role: "Artist",
     featured: false,
     blurb: "Presentation showcasing the design process and user research for the Hourglass app.",
-    cover: "/src/assets/showcase/thumbnails/hourglass-pres.png",
+    cover: hourglassPresentation,
     alt: "Digital character illustration",
     tags: ["Editorial Design", "Adobe Illustrator"],
     links: [{ label: "View Presentation", href: "https://www.canva.com/design/DAFkRKPQ9eE/view?embed" }],
@@ -86,7 +106,7 @@ const allProjects = [
     role: "Artist",
     featured: false,
     blurb: "Whitepaper documenting the design process and user research for the Hourglass app.",
-    cover: "/src/assets/showcase/ux/hourglass.png",
+    cover: hourglassDocumentation,
     alt: "Digital character illustration",
     tags: ["Editorial Design", "Adobe Illustrator"],
     links: [{ label: "View PDF", href: "https://drive.google.com/file/d/1Q-3M_jQA0FN78oFWa6306491OT7EwfKu/preview?usp=embed_googleplus" }],
@@ -97,7 +117,7 @@ const allProjects = [
     role: "UI/UX · Dev",
     featured: true,
     blurb: "A website redesign for Relax Medical Aesthetics, focusing on user experience and modern design.",
-    cover: "src/assets/showcase/ux/relax-capture.png",
+    cover: relaxCapture,
     alt: "Relax Medical Aesthetics website",
     tags: ["Web Design", "Branding", "UI/UX"],
     links: [{ label: "View Website", href: "https://www.relaxmedicalaesthetics.com" }],
@@ -108,7 +128,7 @@ const allProjects = [
     role: "Ripe · Product Development",
     featured: true,
     blurb: "Ripe is a showcase of innovative design solutions that blend creativity with functionality.",
-    cover: "src/assets/showcase/thumbnails/ripe.png",
+    cover: ripeThumbnail,
     alt: "Ripe app dashboard",
     tags: ["Product Design", "3D Modeling", "Branding"],
     links: [
@@ -121,7 +141,7 @@ const allProjects = [
     role: "Artist",
     featured: true,
     blurb: "Whitepaper designed for Systemsnet under their design guidelines.",
-    cover: "/src/assets/showcase/ux/systemsnet.png",
+    cover: systemsnetThumbnail,
     alt: "Digital character illustration",
     tags: ["Editorial Design", "Adobe Illustrator"],
     links: [{ label: "View PDF", href: "https://drive.google.com/file/d/18STesp1LlfQIudu_hhUcdvZ5fCokDy4w/preview?usp=embed_googleplus" }],
@@ -132,7 +152,7 @@ const allProjects = [
     role: "Artist",
     featured: false,
     blurb: "Whitepaper designed for NetatWork under their design guidelines.",
-    cover: "/src/assets/showcase/ux/whitepaperCover.jpg",
+    cover: netatWorkThumbnail,
     alt: "Digital character illustration",
     tags: ["Editorial Design", "Adobe Illustrator"],
     links: [{ label: "View PDF", href: "https://drive.google.com/file/d/1f0hpY8ORIESaGMIC28cEAfrZTHUmNRWl/preview?usp=embed_googleplus" }],
@@ -144,7 +164,7 @@ const allProjects = [
     role: "Editor",
     featured: false,
     blurb: "Short-form video edit for a university project on flood awareness during the New Zealand floods in 2022.",
-    cover: "src/assets/showcase/thumbnails/illuvion-thumbnail.png",
+    cover: illuvisonThumbnail,
     alt: "YouTube video thumbnail",
     tags: ["Adobe Premiere", "Blender"],
     links: [{ label: "Watch", href: "https://www.youtube.com/embed/_7hXxqemQ8A" }],
@@ -155,7 +175,7 @@ const allProjects = [
     role: "Editor",
     featured: false,
     blurb: "Short-form video edit for a university project on flood awareness during the New Zealand floods in 2022.",
-    cover: "src/assets/showcase/ux/illuvison-doc.png",
+    cover: illuvisonDocumentation,
     alt: "YouTube video thumbnail",
     tags: ["Adobe Premiere", "Blender"],
     links: [{ label: "View PDF", href: "https://drive.google.com/file/d/1Gq3EWdwgGvqZD6sOa2r1Anztp0rhj_iU/preview?usp=embed_googleplus" }],
@@ -167,7 +187,7 @@ const allProjects = [
     role: "Editor",
     featured: false,
     blurb: "Short-form video edit for a university project on flood awareness during the New Zealand floods in 2022.",
-    cover: "src/assets/showcase/thumbnails/floodcheck-thumbnail.png",
+    cover: floodCheckThumbnail,
     alt: "YouTube video thumbnail",
     tags: ["Adobe Premiere"],
     links: [{ label: "Watch", href: "https://www.youtube.com/embed/bEyUUaTIy4k" }],
@@ -178,7 +198,7 @@ const allProjects = [
     role: "Artist",
     featured: false,
     blurb: "Original digital character art.",
-    cover: "/src/assets/showcase/ux/floodCheckCover.jpg",
+    cover: floodCheckCover,
     alt: "Digital character illustration",
     tags: ["Editorial Design", "Adobe Illustrator"],
     links: [{ label: "View PDF", href: "https://drive.google.com/file/d/1T1aR9H7OO_HBoithFjBW9UmPeIPcfILK/preview?usp=embed_googleplus" }],
@@ -190,7 +210,7 @@ const allProjects = [
     role: "Editor",
     featured: false,
     blurb: "Short-form video edit for a university project on flood awareness during the New Zealand floods in 2022.",
-    cover: "src/assets/showcase/thumbnails/jymbot-thumbnail.png",
+    cover: jymbotThumbnail,
     alt: "YouTube video thumbnail",
     tags: ["Adobe Premiere", "Blender"],
     links: [{ label: "Watch", href: "https://www.youtube.com/embed/bSCUjIK-hk0" }],
@@ -201,7 +221,7 @@ const allProjects = [
     role: "Editor",
     featured: false,
     blurb: "Short-form video edit for a university project on flood awareness during the New Zealand floods in 2022.",
-    cover: "src/assets/showcase/thumbnails/jymbot-thumbnail2.png",
+    cover: jymbotThumbnail2,
     alt: "YouTube video thumbnail",
     tags: ["Adobe Premiere", "Blender"],
     links: [{ label: "Watch", href: "https://www.youtube.com/embed/xUQRgtwwl7A" }],
@@ -214,7 +234,7 @@ const allProjects = [
     role: "UI/UX · Dev",
     featured: false,
     blurb: "A 3D modeling tool that simplifies the process of creating and editing 3D assets.",
-    cover: "src/assets/showcase/ux/moss3.png",
+    cover: moss3Thumbnail,
     alt: "Moss Cubed app dashboard",
     tags: ["App Design", "Figma", "UI/UX"],
     links: [{ label: "View PDF", href: "https://drive.google.com/file/d/14wsFAJ5D3quvue3FP72QP3nUGQEBj8Zp/preview?usp=embed_googleplus" }],
@@ -225,7 +245,7 @@ const allProjects = [
     role: "UI/UX · Dev",
     featured: false,
     blurb: "A 3D modeling tool that simplifies the process of creating and editing 3D assets.",
-    cover: "src/assets/showcase/ux/moss3-info.png",
+    cover: moss3InfoThumbnail,
     alt: "Moss  app dashboard",
     tags: ["App Design", "Figma", "UI/UX"],
     links: [{ label: "View Image", href: "src/assets/showcase/ux/moss3-info.png" }],

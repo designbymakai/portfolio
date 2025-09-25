@@ -1,5 +1,6 @@
 import { FaMapMarkerAlt, FaPhoneAlt, FaPenAlt, FaLinkedin, FaGithub, FaPlus, FaBrain, FaEye, FaUser, FaChalkboard, FaHandshake, FaBriefcase } from 'react-icons/fa';
 import { useState } from "react";
+import Portrait from '@/assets/portraits/portrait2.png';
 
 const CARD_HEIGHT = 420; // px
 
@@ -188,7 +189,7 @@ const About = () => {
                       <div className="flex flex-col md:flex-row gap-6 w-full h-full">
                           <div className="flex flex-col items-center gap-4 justify-center md:border-r-2 md:pr-6 border-dbm-w-400">
                               <img
-                                  src="src/assets/portraits/portrait2.png"
+                                  src="{Portrait}"
                                   className="rounded-lg align-middle border-gray-300 max-w-[150px] hover:scale-110 -m-16 md:py-0 py-10"
                                   alt="Portrait"
                               />

@@ -8,6 +8,7 @@ export default defineConfig({
     port: 4000,
     host: true,
   },
+  base: '/portfolio/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),

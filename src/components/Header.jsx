@@ -13,48 +13,49 @@ export function Banner() {
       const textElements = document.querySelectorAll('.scrolling-text');
       textElements.forEach((element, index) => {
         const direction = index % 2 === 0 ? 1 : -1;
-        element.style.transform = `translateX(${scrollPosition * direction}px)`;
+        // Subtle translation (30% of original effect)
+        const translateAmount = scrollPosition * direction * 0.3;
+        // Gentle fade as user scrolls down
+        const opacity = Math.max(0.6, 1 - scrollPosition / 1000);
+        element.style.transform = `translateX(${translateAmount}px)`;
+        element.style.opacity = opacity;
       });
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   return (
-    <div id="home" className="mx-auto px-10 m-0 md:p-0 md:w-full h-screen overflow-hidden border-b-8 border-dbm-gr-300 bg-dbm-db-100 flex">
-    <div className="w-full md:w-1/2 bg-dbm-db-100 flex flex-col justify-center mx-0 md:mr-10 md:ml-6 md:pl-0 overflow-none">
-      <div className="container max-w-4xl mx-auto text-left break-normal overflow-none ">
-        <div className="scrolling-text-container overflow-hidden">
-          <p className="text-lg md:text-[1.8rem] text-dbm-w-200">
-            Hello, I'm <span className='text-dbm-lb-200 head-span text-xl md:text-[2rem]'>Makai</span>
-          </p>
-          <p className="text-base md:text-[1.6rem] mb-4 text-wrap text-dbm-w-200">
-            Innovative Designer Crafting Solutions That Inspire and Perform
-          </p>
-          <p className="scrolling-text text-sm md:text-base mb-3 text-wrap">
-            <span className='head-span'>Versatile</span> and <span className='head-span'>passionate</span> designer, specializing in <span className='head-span'>Innovative</span> solutions that merge <span className='head-span'>creativity </span> with <span className='head-span'>functionality</span>. 
-          </p>
-         
-          <p className="scrolling-text text-sm md:text-base mb-3 text-wrap">
-            <span className='head-span'>Multidisciplinary</span> skill set spanning UX/UI, graphic design, web design, 3D modeling, and brand development
-          </p>
-          <p className="scrolling-text text-sm md:text-base mb-3 text-wrap">
-            Design practice based in <span className='head-span'>human-centered design</span> principles, honed through <span className='head-span'>real-world projects</span>
-          </p>
-          <p className="scrolling-text text-sm md:text-base mb-3 text-wrap">
-            Eager to participate on projects that <span className='head-span'>push boundaries</span> and create <span className='head-span'>meaningful impact</span>
-          </p>
-          <p className="scrolling-text text-sm md:text-base mb-3 text-wrap">
-            With a <span className='head-span'>global perspective</span> as an <span className='head-span'>American-Kiwi dual citizen</span>
-          </p>
+    <div id="home" className="w-full h-full bg-dbm-db-100">
+      <div className="flex h-full">
+        {/* Left: portrait with original scrolling intro overlay (card) */}
+        <div className="w-full h-full p-4 sm:py-6 sm:pl-6 flex items-center">
+          <div className="relative w-full h-full rounded-lg overflow-hidden shadow-lg bg-dbm-db-200">
+            <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${Portrait})` }} />
+            <div className="absolute inset-0 bg-dbm-db-100/40 " />
+            <div className="relative z-10 h-full flex items-center px-4 sm:px-6 py-6 sm:py-0 overflow-hidden">
+            <div className="scrolling-text-container w-full overflow-hidden">
+              <p className="text-lg md:text-[1.8rem] text-dbm-w-200">
+                Hello, I'm <span className='text-dbm-lb-200 head-span text-xl md:text-[2rem]'>Makai</span>.
+              </p>
+              <p className="text-base md:text-[1.6rem] mb-2 md:mb-4 text-wrap text-dbm-w-200">
+                I'm a UX-focused designer who creates accessible, human-centered digital experiences that are clear, intuitive, and impactful.
+              </p>
+              <p className="scrolling-text text-sm md:text-base mb-1.5 md:mb-3 text-wrap">
+                My work is grounded in <span className='head-span'>Human-Centered Design</span> principles, with a strong emphasis on <span className='head-span'>accessibility</span>, <span className='head-span'>usability</span>, and thoughtful interaction. I design with <span className='head-span'>real people</span> in mind—considering diverse needs, abilities, and contexts from the very beginning.
+              </p>
+              <p className="scrolling-text text-sm md:text-base mb-1.5 md:mb-3 text-wrap">
+                With a <span className='head-span'>multidisciplinary background</span> spanning UX/UI, web design, visual design, and 3D, I bring a <span className='head-span'>systems-level perspective</span> to problem solving—using the right tools to support inclusive, scalable solutions rather than designing for design's sake.
+              </p>
+              <p className="scrolling-text text-sm md:text-base mb-1.5 md:mb-3 text-wrap">
+                I'm motivated by projects that <span className='head-span'>push boundaries responsibly</span>, <span className='head-span'>improve everyday experiences</span>, and <span className='head-span'>turn complexity into clarity</span>.
+              </p>
+              
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        className="md:w-4/12 bg-cover bg-center relative top-0 h-screen right-10"
-        style={{ backgroundImage: `url(${Portrait})` }}
-      >
-        <div className="md:w-1/12 bg-dbm-db-100"></div>
       </div>
     </div>
   );
@@ -65,31 +66,37 @@ export function Nav() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollYTrigger = 100;
-      const isTop = window.scrollY < scrollYTrigger;
+      // Become sticky after scrolling past the banner (about 90% of viewport height)
+      const trigger = window.innerHeight * 0.9;
+      const isTop = window.scrollY < trigger;
       setIsSticky(!isTop);
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleScroll);
+    // run once to set initial state
+    handleScroll();
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
   }, []);
 
   return (
-    <nav className={`${isSticky ? 'fixed top-0 inset-x-0 bg-gray-900' : 'absolute top-0 inset-x-0'} z-40 transition-all duration-700 ease-in-out`}>
-      <div className={`${isSticky ? 'max-w-full px-4 justify-center' : 'container justify-start'} mx-auto flex items-center h-14 transition-all duration-700 ease-in-out`}>
-        <div className="flex items-center drop-shadow-2xl">
-          <img src="/dbm-logo.png" alt="logo" className="h-10 w-10"/>
-        </div>
-        <ul className="list-reset flex items-center space-x-4 ml-4">
+    <nav className={`sticky top-0 inset-x-0 z-40 ${isSticky ? 'bg-gray-900/95 shadow-lg' : 'bg-dbm-db-100'} transition-colors duration-500 ease-in-out transform transition-transform`}>
+      <div className={`${isSticky ? 'max-w-full px-4 justify-center h-12 -translate-y-0' : 'container px-4 justify-start h-16 translate-y-0'} mx-auto flex items-center transition-all duration-500 ease-in-out`}>
+        
+        <ul className={`list-reset flex items-center space-x-4 transition-all duration-500 ${isSticky ? 'pl-0' : 'pl-4'}`}>
           <li>
             <Tippy content="My latest projects" placement="bottom">
               <span className="inline-block">
                 <Link
                   to="home"
                   spy={true}
+                  activeClass="text-dbm-lb-100"
                   smooth={true}
                   duration={500}
-                  className="text-gray-500 hover:text-dbm-lb-200 cursor-pointer"
+                  className="text-dbm-w-400 hover:text-dbm-lb-200 cursor-pointer text-lg"
                 >
                   Home
                 </Link>
@@ -102,9 +109,10 @@ export function Nav() {
                 <Link
                   to="spotlight"
                   spy={true}
+                  activeClass="text-dbm-lb-100"
                   smooth={true}
                   duration={500}
-                  className="text-gray-500 hover:text-dbm-lb-200 cursor-pointer"
+                  className="text-dbm-w-400 hover:text-dbm-lb-200 cursor-pointer text-lg"
                 >
                   Spotlight
                 </Link>
@@ -119,9 +127,10 @@ export function Nav() {
                 <Link
                   to="skills"
                   spy={true}
+                  activeClass="text-dbm-lb-100"
                   smooth={true}
                   duration={500}
-                  className="text-gray-500 hover:text-dbm-lb-200 cursor-pointer"
+                  className="text-dbm-w-400 hover:text-dbm-lb-200 cursor-pointer text-lg"
                 >
                   Skills
                 </Link>
@@ -134,9 +143,10 @@ export function Nav() {
                 <Link
                   to="about"
                   spy={true}
+                  activeClass="text-dbm-lb-100"
                   smooth={true}
                   duration={500}
-                  className="text-gray-500 hover:text-dbm-lb-200 cursor-pointer"
+                  className="text-dbm-w-400 hover:text-dbm-lb-200 cursor-pointer text-lg"
                 >
                   About
                 </Link>

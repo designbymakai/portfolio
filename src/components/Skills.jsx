@@ -25,7 +25,7 @@ import jymbotThumbnail from '@/assets/showcase/thumbnails/jymbot-thumbnail.png';
 import jymbotThumbnail2 from '@/assets/showcase/thumbnails/jymbot-thumbnail2.png';
 import moss3Thumbnail from '@/assets/showcase/ux/moss3.png';
 import moss3InfoThumbnail from '@/assets/showcase/ux/moss3-info.png';
-
+import netatWorkThumbnail2 from '@/assets/showcase/thumbnails/naw-erp.png';
 
 // Combine all projects into one category
 const allProjects = [
@@ -143,7 +143,7 @@ const allProjects = [
     blurb: "Whitepaper designed for Systemsnet under their design guidelines.",
     cover: systemsnetThumbnail,
     alt: "Digital character illustration",
-    tags: ["Editorial Design", "Adobe Illustrator"],
+    tags: ["Editorial Design", "Adobe Indesign"],
     links: [{ label: "View PDF", href: "https://drive.google.com/file/d/18STesp1LlfQIudu_hhUcdvZ5fCokDy4w/preview?usp=embed_googleplus" }],
   },
   {
@@ -154,8 +154,18 @@ const allProjects = [
     blurb: "Whitepaper designed for NetatWork under their design guidelines.",
     cover: netatWorkThumbnail,
     alt: "Digital character illustration",
-    tags: ["Editorial Design", "Adobe Illustrator"],
+    tags: ["Editorial Design", "Adobe Indesign"],
     links: [{ label: "View PDF", href: "https://drive.google.com/file/d/1f0hpY8ORIESaGMIC28cEAfrZTHUmNRWl/preview?usp=embed_googleplus" }],
+  },{
+    id: "Whitepapers-3",
+    title: "NetatWork ERP Whitepaper",
+    role: "Artist",
+    featured: false,
+    blurb: "Whitepaper designed for NetatWork under their design guidelines.",
+    cover: netatWorkThumbnail2,
+    alt: "Digital character illustration",
+    tags: ["Editorial Design", "Adobe Indesign"],
+    links: [{ label: "View PDF", href: "https://drive.google.com/file/d/1nfTZWS97CPlW-MozTJUHwdq0OF7ksOFf/preview?usp=embed_googleplus" }],
   },
   // Illuvison
   {

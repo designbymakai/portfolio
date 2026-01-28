@@ -1,92 +1,77 @@
 import React from "react";
 import FeatureTimeline from "./FeatureTimeline";
 import { FaGithub, FaLink } from "react-icons/fa";
-import butterflyHome from "@/assets/butterfly/features/butterfly-home.png";
-import butterflyAI from "@/assets/butterfly/features/ai-assistant.png";
-import butterflyCalendar from "@/assets/butterfly/features/calendar.png";
-import butterflyTasks from "@/assets/butterfly/features/tasks.png";
-import butterflyProjects from "@/assets/butterfly/features/projects.png";
-import butterflyProjectsNote from "@/assets/butterfly/features/projectsnote.png";
 import butterflyMachero from "@/assets/butterfly/butterfly-machero.png";
+
+// Eagerly load feature images and collect by prefix (ai, task, proj)
+const featureImageMap = import.meta.glob(
+  "@/assets/butterfly/features/*.png",
+  { eager: true, import: "default" }
+);
+
+const collectImages = (prefix) => {
+  return Object.entries(featureImageMap)
+    .map(([path, src]) => {
+      const match = path.match(new RegExp(`/${prefix}(\\d+)\\.png$`));
+      if (!match) return null;
+      return { idx: Number(match[1]), src };
+    })
+    .filter(Boolean)
+    .sort((a, b) => a.idx - b.idx)
+    .map(({ src }) => src);
+};
 
 export default function Butterfly() {
   const features = [
-  { 
-      title: "Smart Dashboard",
-      text: "The Butterfly homepage offers a clear and concise overview of your day, allowing you to hit the ground running. It displays a thumbnail of your calendar events, a daily agenda highlighting tasks and events, and a summary of active tasks, including those due that day.",
-      img: butterflyHome,
+    {
+      title: "AI and Prioritisation Assistance",
+      text: "The AI Assistant takes center stage, offering quick interactions to add, update, or prioritize tasks. You can check upcoming tasks and get advice on what to focus on, helping you kickstart your day with clarity and confidence.",
+      images: collectImages("ai"),
       features: [
-        "Overview of your day",
-        "Thumbnail of calendar events",
-        "Daily agenda highlighting tasks",
-        "Summary of active tasks"
+        "Quick interactions to manage tasks",
+        "Check upcoming tasks",
+        "Get advice on what to focus on",
+        "Intelligent task prioritization"
       ],
     },
     {
-      title: "AI Assistant",
-      text: "The AI Assistant takes center stage on this page, offering quick interactions to add, update, or prioritize tasks. You can also check upcoming tasks and get advice on what to focus on. The homepage is designed to give you all the essential information at a glance, helping you kickstart your day efficiently.",
-        img: butterflyAI,
-        features: [
-          "Quick interactions to manage tasks",
-          "Check upcoming tasks",
-          "Get advice on what to focus on"
-        ],
-      },
-  {
-    title: "Calendar Integration",
-    text: "Drag and drop events, color-coded for clarity.",
-    img: butterflyCalendar,
-    features: [
-          "Drag and drop events and tasks",
-          "Color-coded for clarity",
-          "Customizable views"
-        ],
-  },
-  {
-    title: "Task Management",
-    text: "All of your tasks in one place for easy management.",
-    img: butterflyTasks,
-    features: [
-      "Create, edit, and delete tasks",
-      "Set due dates and reminders",
-      "Organize tasks by project, tag, or priority"
-    ],
-  },
-  {
-    title: "Project Overviews",
-        text: "Get a high-level view of your projects and their progress.",
-        img: butterflyProjects,
-        features: [
-          "Visualize project timelines",
-          "Track milestones and deadlines",
-          "Identify bottlenecks and issues"
-        ],
-  },
-  {
-    title: "Project Notes",
-        text: "Create notes and link them to projects for easy reference.",
-        img: butterflyProjectsNote,
-        features: [
-          "Rich text formatting",
-          "Link notes to tasks and projects",
-          "Searchable and organized",
-          "View tasks and link them to notes"
-    ],
-  },
-];
+      title: "Task and Event Management",
+      text: "All of your tasks and events in one place for easy management. Drag and drop functionality with color-coded clarity makes organizing your workload intuitive and efficient.",
+      images: collectImages("task"),
+      features: [
+        "Create, edit, and delete tasks",
+        "Set due dates and reminders",
+        "Drag and drop events",
+        "Color-coded for clarity",
+        "Organize by project, tag, or priority"
+      ],
+    },
+    {
+      title: "Project Organisation and Notes",
+      text: "Get a high-level view of your projects and their progress. Create rich-text notes, link them to projects and tasks, and keep everything searchable and organized in one centralized location.",
+      images: collectImages("proj"),
+      features: [
+        "Visualize project timelines",
+        "Track milestones and deadlines",
+        "Rich text formatting",
+        "Link notes to tasks and projects",
+        "Searchable and organized"
+      ],
+    },
+  ];
   return (
-    <section>
-      <div className="flex flex-col md:flex-row items-center justify-center py-12 px-12 md:px-12 bg-dbm-db-200" id="spotlight">
+    <section id="spotlight">
+      <div className="flex flex-col md:flex-row items-center justify-center py-12 px-12 md:px-12 bg-dbm-db-200">
         {/* Left: Title and Intro */}
         <div className="w-full md:w-1/2 flex flex-col items-start justify-between mb-8 md:mb-0 md:pr-8 space-y-6">
           <div className="">
             <h1 className="text-3xl md:text-5xl font-bold text-dbm-pr-100 mb-4">Butterfly Productivity</h1>
             <p className="text-lg md:text-2xl text-dbm-w-200 mb-2">
-              Butterfly is a productivity dashboard designed for clarity and focus. 
-              Organize tasks, track your week, and manage your calendar—all in one place.
+              Butterfly is a human-centered productivity dashboard created to support neurodivergent users.
+
             </p>
-            <p className="text-base md:text-lg text-dbm-w-400">
-              Built for neurodivergent users and anyone who wants a smarter, simpler workflow.
+            <p className="text-base md:text-xlf text-dbm-w-400">
+              Designed to minimize cognitive overload and task paralysis, it combines task organization, weekly visibility, and calendar management into one accessible system.
             </p>
           </div>
           <div className="mt-4">

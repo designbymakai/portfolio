@@ -67,7 +67,7 @@ export default function Butterfly() {
           <div className="">
             <h1 className="text-3xl md:text-5xl font-bold text-dbm-pr-100 mb-4">Butterfly Productivity</h1>
             <p className="text-lg md:text-2xl text-dbm-w-200 mb-2">
-              Butterfly is a human-centered productivity dashboard created to support neurodivergent users.
+              Butterfly is a human-centered productivity dashboard created to support neurodivergent users and award winner of '2025 Hot New Things' by Design Assembly.
 
             </p>
             <p className="text-base md:text-xlf text-dbm-w-400">

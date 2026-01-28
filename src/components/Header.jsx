@@ -33,13 +33,13 @@ export function Banner() {
         <div className="w-full h-full p-4 sm:py-6 sm:pl-6 flex items-center">
           <div className="relative w-full h-full rounded-lg overflow-hidden shadow-lg bg-dbm-db-200">
             <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${Portrait})` }} />
-            <div className="absolute inset-0 bg-dbm-db-100/40 " />
+            <div className="absolute inset-0 bg-dbm-db-100/60 backdrop-blur-[0.5px]" />
             <div className="relative z-10 h-full flex items-center px-4 sm:px-6 py-6 sm:py-0 overflow-hidden">
             <div className="scrolling-text-container w-full overflow-hidden">
-              <p className="text-lg md:text-[1.8rem] text-dbm-w-200">
+              <p className="text-lg md:text-[1.8rem] text-dbm-w-200" style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.8), 0 1px 3px rgba(0, 0, 0, 0.9)' }}>
                 Hello, I'm <span className='text-dbm-lb-200 head-span text-xl md:text-[2rem]'>Makai</span>.
               </p>
-              <p className="text-base md:text-[1.6rem] mb-2 md:mb-4 text-wrap text-dbm-w-200">
+              <p className="text-base md:text-[1.6rem] mb-2 md:mb-4 text-wrap text-dbm-w-200" style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.8), 0 1px 3px rgba(0, 0, 0, 0.9)' }}>
                 I'm a UX-focused designer who creates accessible, human-centered digital experiences that are clear, intuitive, and impactful.
               </p>
               <p className="scrolling-text text-sm md:text-base mb-1.5 md:mb-3 text-wrap">

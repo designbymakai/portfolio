@@ -57,11 +57,13 @@
   color: #fff;
   transition: transform 0.1s linear;
   white-space: normal;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), 0 1px 3px rgba(0, 0, 0, 0.9);
 }
 
 .head-span {
   font-size: 1.2rem;
   color: #57C1DA;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), 0 1px 3px rgba(0, 0, 0, 0.9);
 }
 
 @media (min-width: 768px) {
@@ -79,6 +81,7 @@
 
   .head-span {
     font-size: 1.4rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), 0 1px 3px rgba(0, 0, 0, 0.9);
   }
 }
 .slider-container {

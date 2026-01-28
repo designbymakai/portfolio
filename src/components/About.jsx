@@ -1,6 +1,6 @@
 import { FaMapMarkerAlt, FaPhoneAlt, FaPenAlt, FaLinkedin, FaGithub, FaPlus, FaBrain, FaEye, FaUser, FaChalkboard, FaHandshake, FaBriefcase } from 'react-icons/fa';
 import { useState } from "react";
-import Portrait from '@/assets/portraits/portrait2.png';
+import Portrait from '@/assets/portraits/portrait2.jpg';
 
 const CARD_HEIGHT = 420; // px
 

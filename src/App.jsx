@@ -6,6 +6,11 @@ import Butterfly from "./components/Butterfly";
 import FeaturedProjects from "./components/FeaturedProjects";
 import { useState, useEffect } from 'react';
 
+// Import showcase images
+import butterflyBanner from "@/assets/showcase/ux/banner-butterfly.png";
+import ripeThumb from "@/assets/showcase/thumbnails/ripe.png";
+import hourglassThumb from "@/assets/showcase/thumbnails/hourglass-thumbnail.png";
+
 
 function App() {
   const projects = [
@@ -13,19 +18,19 @@ function App() {
       id: 1,
       title: 'Butterfly Productivity',
       description: 'Productivity dashboard designed for clarity and focus',
-      image: '/src/assets/showcase/ux/banner-butterfly.png'
+      image: butterflyBanner
     },
     {
       id: 2,
       title: 'Ripe Visuals',
       description: 'Branding, 3D modeling, and aesthetic design for Ripe',
-      image: '/src/assets/showcase/thumbnails/ripe.png'
+      image: ripeThumb
     },
     {
       id: 3,
       title: 'Hourglass Recycling',
       description: 'Circular recycling platform with lifecycle tracking and intuitive user flows.',
-      image: '/src/assets/showcase/thumbnails/hourglass-thumbnail.png'
+      image: hourglassThumb
     }
   ];
 
